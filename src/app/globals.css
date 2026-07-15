@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #ffffff;
+  --fg: #000000;
+  --fg-muted: rgba(0, 0, 0, 0.62);
+  --fg-tertiary: rgba(0, 0, 0, 0.5);
+  --accent: #0388b7;
+  --accent-chip: rgba(3, 136, 183, 0.12);
+  --header-bg: rgba(255, 255, 255, 0.99);
+  --card-blue: #f0f6fb;
+  --shadow-card: 0 8px 24px rgba(0, 35, 108, 0.08);
+  --pad-x: 24px;
+  --header-h: 80px;
+  --section-y: 96px;
+  --section-y-lg: 120px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-host-grotesk), var(--font-noto-sans-jp), sans-serif;
+  --font-display: var(--font-montserrat), var(--font-host-grotesk),
+    var(--font-noto-sans-jp), sans-serif;
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-tertiary: var(--fg-tertiary);
+  --color-accent: var(--accent);
+  --color-accent-chip: var(--accent-chip);
+  --color-card-blue: var(--card-blue);
+  --color-header: var(--header-bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-host-grotesk), var(--font-noto-sans-jp), sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 22%, white);
+}
+
+.font-display {
+  font-family: var(--font-montserrat), var(--font-host-grotesk),
+    var(--font-noto-sans-jp), sans-serif;
+}
+
+/* サイズは維持しつつ、折り返さないよう vw で収める */
+.section-heading {
+  color: var(--fg);
+  font-size: clamp(22px, 3.6vw, 48px);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.section-heading-lg {
+  color: var(--fg);
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.page-pad {
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+
+.section-block {
+  padding-top: var(--section-y);
+  padding-bottom: var(--section-y);
+}
+
+@media (min-width: 1024px) {
+  .section-block {
+    padding-top: var(--section-y-lg);
+    padding-bottom: var(--section-y-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --pad-x: 16px;
+    --section-y: 72px;
+  }
+
+  .section-heading,
+  .section-heading-lg {
+    font-size: clamp(16px, 4.8vw, 28px);
+  }
 }
