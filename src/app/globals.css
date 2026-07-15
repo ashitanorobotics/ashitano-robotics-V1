@@ -237,6 +237,10 @@ body {
   white-space: normal;
 }
 
+#request-demo-section .section-heading-lg {
+  color: #fff;
+}
+
 @media (min-width: 768px) {
   .section-heading:not(.whitespace-pre-line),
   .section-heading-lg:not(.whitespace-pre-line) {
@@ -328,15 +332,6 @@ body {
   }
 }
 
-@keyframes hero-kenburns {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.12);
-  }
-}
-
 /* Scroll-triggered entrance — only plays after .reveal-visible */
 .reveal-rise {
   opacity: 0;
@@ -386,12 +381,6 @@ body {
   transform-origin: center 60%;
 }
 
-.reveal-hero-media.reveal-visible .motion-hero-kenburns {
-  animation: hero-kenburns 16s cubic-bezier(0.25, 0.1, 0.25, 1) 1.6s both;
-  will-change: transform;
-  transform-origin: center 55%;
-}
-
 .motion-card {
   transition:
     transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
@@ -421,7 +410,6 @@ body {
   .reveal-hero-line,
   .reveal-hero-media .motion-hero-frame,
   .reveal-hero-media .motion-hero-media,
-  .reveal-hero-media .motion-hero-kenburns,
   .motion-card,
   .capability-media img {
     animation: none !important;

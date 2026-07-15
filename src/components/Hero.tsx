@@ -22,42 +22,40 @@ export default function Hero() {
             style={{ height: "calc(100vh - 112px)" }}
           >
             <div className="motion-hero-media absolute inset-0">
-              <div className="motion-hero-kenburns absolute inset-0">
-                {hasMedia ? (
-                  <>
-                    {hasMobile ? (
-                      <Image
-                        src="/images/hero-vision-mobile.png"
-                        alt="人とヒューマノイドロボットが並び、未来を見据える様子"
-                        fill
-                        priority
-                        quality={95}
-                        sizes="100vw"
-                        className="object-cover object-center md:hidden"
-                      />
-                    ) : null}
-                    {hasDesktop ? (
-                      <Image
-                        src="/images/hero-vision-desktop-v3.png"
-                        alt="人とヒューマノイドロボットが並び、未来を見据える様子"
-                        fill
-                        priority
-                        quality={95}
-                        sizes="100vw"
-                        className={
-                          hasMobile
-                            ? "hidden object-cover object-[center_70%] md:block"
-                            : "object-cover object-[center_70%]"
-                        }
-                      />
-                    ) : null}
-                  </>
-                ) : (
-                  <div className="flex h-full items-center justify-center text-sm text-black/40">
-                    /images/hero-vision-desktop-v3.png
-                  </div>
-                )}
-              </div>
+              {hasMedia ? (
+                <>
+                  {hasMobile ? (
+                    <Image
+                      src="/images/hero-vision-mobile.png"
+                      alt="人とヒューマノイドロボットが並び、未来を見据える様子"
+                      fill
+                      priority
+                      quality={95}
+                      sizes="100vw"
+                      className="object-cover object-center md:hidden"
+                    />
+                  ) : null}
+                  {hasDesktop ? (
+                    <Image
+                      src="/images/hero-vision-desktop-v3.png"
+                      alt="人とヒューマノイドロボットが並び、未来を見据える様子"
+                      fill
+                      priority
+                      quality={95}
+                      sizes="100vw"
+                      className={
+                        hasMobile
+                          ? "hidden object-cover object-[center_70%] md:block"
+                          : "object-cover object-[center_70%]"
+                      }
+                    />
+                  ) : null}
+                </>
+              ) : (
+                <div className="flex h-full items-center justify-center text-sm text-black/40">
+                  /images/hero-vision-desktop-v3.png
+                </div>
+              )}
             </div>
           </div>
         </Reveal>

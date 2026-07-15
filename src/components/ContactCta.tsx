@@ -41,11 +41,11 @@ export default function ContactCta() {
         <div className="mx-auto max-w-[640px] text-center">
           <h2
             id="contact-heading"
-            className="text-[clamp(16px,4vw,48px)] font-bold leading-[1.33] tracking-[-0.02em] md:whitespace-nowrap"
+            className="section-heading-lg mx-auto"
           >
             {site.contact.title}
           </h2>
-          <p className="mt-4 whitespace-pre-line text-[18px] leading-relaxed text-white/90">
+          <p className="mt-6 whitespace-pre-line text-[clamp(16px,1.8vw,22px)] leading-relaxed text-white/90">
             {site.contact.body}
           </p>
         </div>
