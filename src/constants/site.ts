@@ -2,15 +2,15 @@ export const site = {
   name: "あしたのロボティクス",
   nameEn: "ASHITANO Robotics",
   productLine: "One Home, One Robot",
+  headerCaption: "Real World Interface. Made in Japan.",
   email: "contact@ashitanorobotics.co.jp",
   tagline: "一家一台が、あたりまえになるまで。",
   description:
-    "一家一台のロボット時代のために、ロボットと実世界の Real World Interface を強めます。導入・実証・活用の実装を通じて、暮らしに届くロボット社会をつくります。",
+    "一家一台のロボット時代のために、ロボットと実世界の接続を強めます。導入・実証・活用の実装を通じて、暮らしに届くロボット社会をつくります。",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
   hero: {
     subtitle: "Real World Interface.",
-    description:
-      "一家一台のロボットが、あたりまえになる社会を。\nReal World Interface で、そこに届ける。",
+    description: "一家一台ロボットの時代を目指して",
   },
   problem: {
     title: "ロボットと世界のあいだには、\nまだ距離がある",
@@ -28,13 +28,13 @@ export const site = {
       {
         number: "03",
         title: "一家一台は、すぐには来ない",
-        body: "家庭も施設も、接続の積み重ねが前提になる。Real World Interface を実装し続けることでしか、その距離は縮まらない。",
+        body: "家庭も施設も、接続の積み重ねが前提になる。その実装を続けてこそ、距離は縮まる。",
       },
     ],
   },
   solution: {
     title: "実世界との接続を、強化する",
-    emphasis: "One Home, One Robot のための Real World Interface を、実装する。",
+    emphasis: "One Home, One Robot のための接続を、実装する。",
     capabilities: [
       {
         title: "用途に合わせて入れる",
@@ -88,11 +88,11 @@ export const site = {
   vision: {
     title: "一家一台に向けて。",
     subtitle:
-      "ロボットが特別ではなく、家庭に一台あるのが前提になる。\nその未来に、Real World Interface で届ける。",
+      "ロボットが特別ではなく、家庭に一台あるのが前提になる。\nその未来に、届ける。",
   },
   contact: {
-    title: "Real World Interface を、一緒に",
-    body: "導入、実証、体験設計。\n一家一台に近づく一歩を、構想段階からご相談ください。",
+    title: "まずは、ご相談ください",
+    body: "導入、実証、体験設計。\n構想の段階から、一緒に整理します。",
     cta: "お問い合わせ",
   },
 } as const;
