@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { site } from "@/constants/site";
+import Reveal from "@/components/Reveal";
 
 export default function ContactCta() {
   const [sentHint, setSentHint] = useState(false);
@@ -36,18 +37,25 @@ export default function ContactCta() {
       className="bg-black px-6 py-[var(--section-y)] text-white lg:py-[var(--section-y-lg)]"
       aria-labelledby="contact-heading"
     >
-      <div className="mx-auto max-w-[640px] text-center">
-        <h2
-          id="contact-heading"
-          className="text-[clamp(16px,4vw,48px)] font-bold leading-[1.33] tracking-[-0.02em] md:whitespace-nowrap"
-        >
-          {site.contact.title}
-        </h2>
-        <p className="mt-4 whitespace-pre-line text-[18px] leading-relaxed text-white/90">
-          {site.contact.body}
-        </p>
+      <Reveal>
+        <div className="mx-auto max-w-[640px] text-center">
+          <h2
+            id="contact-heading"
+            className="text-[clamp(16px,4vw,48px)] font-bold leading-[1.33] tracking-[-0.02em] md:whitespace-nowrap"
+          >
+            {site.contact.title}
+          </h2>
+          <p className="mt-4 whitespace-pre-line text-[18px] leading-relaxed text-white/90">
+            {site.contact.body}
+          </p>
+        </div>
+      </Reveal>
 
-        <form className="mt-10 space-y-4 text-left" onSubmit={onSubmit}>
+      <Reveal delayMs={140}>
+        <form
+          className="mx-auto mt-10 max-w-[640px] space-y-4 text-left"
+          onSubmit={onSubmit}
+        >
           <label className="block">
             <span className="mb-2 block text-sm text-white/70">
               メールアドレス（必須）
@@ -110,7 +118,7 @@ export default function ContactCta() {
             </p>
           )}
         </form>
-      </div>
+      </Reveal>
     </section>
   );
 }

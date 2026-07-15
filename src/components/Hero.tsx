@@ -16,7 +16,7 @@ export default function Hero() {
     <div className="pt-[88px]">
       <section className="page-pad" aria-label="メインビジュアル">
         <div
-          className="relative overflow-hidden rounded-[24px] bg-white"
+          className="motion-hero-media relative overflow-hidden rounded-[24px] bg-white"
           style={{ height: "calc(100vh - 112px)" }}
         >
           {hasMedia ? (
@@ -57,7 +57,7 @@ export default function Hero() {
       </section>
 
       <section
-        className="page-pad section-block flex flex-col items-center gap-6 text-center"
+        className="page-pad section-block motion-hero-copy flex flex-col items-center gap-6 text-center"
         aria-labelledby="hero-heading"
       >
         <h1
@@ -69,7 +69,7 @@ export default function Hero() {
         <p className="text-[18px] font-normal leading-[1.5] text-black sm:text-[20px]">
           {site.hero.subtitle}
         </p>
-        <p className="max-w-[880px] text-[clamp(16px,2vw,24px)] font-medium leading-[1.6] text-black">
+        <p className="max-w-[880px] whitespace-pre-line text-[clamp(16px,2vw,24px)] font-medium leading-[1.6] text-black">
           {site.hero.description}
         </p>
       </section>

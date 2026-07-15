@@ -2,33 +2,32 @@ export const site = {
   name: "あしたのロボティクス",
   nameEn: "ASHITANO Robotics",
   productLine: "One Home, One Robot",
-  headerCaption: "Real World Interface.",
   email: "contact@ashitanorobotics.co.jp",
-  tagline: "一世帯一台が、あたりまえになるまで。",
+  tagline: "一家一台が、あたりまえになるまで。",
   description:
-    "一世帯一台のロボット時代のために、ロボットと実世界の Real World Interface を強めます。導入・実証・活用の実装を通じて、暮らしに届くロボット社会をつくります。",
+    "一家一台のロボット時代のために、ロボットと実世界の Real World Interface を強めます。導入・実証・活用の実装を通じて、暮らしに届くロボット社会をつくります。",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
   hero: {
     subtitle: "Real World Interface.",
     description:
-      "一世帯一台のロボットが、あたりまえになる社会を。Real World Interface で、そこに届ける。",
+      "一家一台のロボットが、あたりまえになる社会を。\nReal World Interface で、そこに届ける。",
   },
   problem: {
     title: "ロボットと世界のあいだには、\nまだ距離がある",
     items: [
       {
         number: "01",
-        title: "動けることと、使えることは違う",
-        body: "ハードは進化した。それでも現場に入ると止まる。理由は性能不足より、“使いどころ”と運用が整っていないことにある。",
+        title: "動ける ≠ 使える",
+        body: "ハードは進化した。それでも実環境に入ると止まる。理由は性能不足より、“使いどころ”と運用が整っていないことにある。",
       },
       {
         number: "02",
-        title: "現場でしか、答えは出ない",
+        title: "試して、初めて分かる",
         body: "展示やデモでは分からないことがある。人と空間のあいだで試し、手応えを得て初めて、導入の形が見えてくる。",
       },
       {
         number: "03",
-        title: "一世帯一台は、すぐには来ない",
+        title: "一家一台は、すぐには来ない",
         body: "家庭も施設も、接続の積み重ねが前提になる。Real World Interface を実装し続けることでしか、その距離は縮まらない。",
       },
     ],
@@ -38,22 +37,22 @@ export const site = {
     emphasis: "One Home, One Robot のための Real World Interface を、実装する。",
     capabilities: [
       {
-        title: "現場に合わせて入れる",
+        title: "用途に合わせて入れる",
         description:
           "施設や事業、暮らしの文脈に合うロボットを選定し、導入の条件と運用を設計します。",
-        image: "/images/capability-1.jpg",
+        image: "/images/cap-use-v3.jpg",
       },
       {
         title: "実世界で確かめる",
         description:
-          "店舗、施設、イベントなど、人がいる場所で実証し、机上の可能性を現場の手応えに変えます。",
-        image: "/images/capability-2.jpg",
+          "店舗、施設、イベントなど、人がいる場所で実証し、机上の可能性を実際の手応えに変えます。",
+        image: "/images/cap-verify-v3.jpg",
       },
       {
         title: "体験として広げる",
         description:
           "ヒューマノイドの存在感を活かし、プロモーションや体験施策を通じて社会接点をつくります。",
-        image: "/images/capability-3.jpg",
+        image: "/images/cap-experience-v3.jpg",
       },
     ],
   },
@@ -63,13 +62,13 @@ export const site = {
       {
         title: "ロボット導入支援",
         description:
-          "適した機体の選定から、導入条件・運用設計まで。現場に“接続できる形”へ整えます。",
+          "適した機体の選定から、導入条件・運用設計まで。実環境に“接続できる形”へ整えます。",
         tags: ["選定", "導入設計", "運用"],
       },
       {
         title: "実証実験の企画・運営",
         description:
-          "商業施設、イベント、店舗などの実環境で検証し、一世帯一台への道筋を具体化します。",
+          "商業施設、イベント、店舗などの実環境で検証し、一家一台への道筋を具体化します。",
         tags: ["フィールド", "実証", "検証"],
       },
       {
@@ -87,13 +86,13 @@ export const site = {
     ],
   },
   vision: {
-    title: "一世帯一台に向けて。",
+    title: "一家一台に向けて。",
     subtitle:
       "ロボットが特別ではなく、家庭に一台あるのが前提になる。\nその未来に、Real World Interface で届ける。",
   },
   contact: {
     title: "Real World Interface を、一緒に",
-    body: "導入、実証、体験設計。\n一世帯一台に近づく一歩を、構想段階からご相談ください。",
+    body: "導入、実証、体験設計。\n一家一台に近づく一歩を、構想段階からご相談ください。",
     cta: "お問い合わせ",
   },
 } as const;

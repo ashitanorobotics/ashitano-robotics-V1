@@ -120,3 +120,188 @@ body {
     font-size: clamp(18px, 5.2vw, 26px);
   }
 }
+
+/* Motion */
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.motion-hero-media {
+  animation: soft-zoom 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.motion-hero-copy > *:nth-child(1) {
+  animation: fade-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.motion-hero-copy > *:nth-child(2) {
+  animation: fade-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+
+.motion-hero-copy > *:nth-child(3) {
+  animation: fade-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.36s both;
+}
+
+.motion-card {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.motion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.motion-media-frame {
+  overflow: hidden;
+}
+
+.motion-media-frame img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.motion-media-frame:hover img {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .reveal-visible,
+  .motion-hero-media,
+  .motion-hero-copy > *,
+  .motion-card,
+  .capability-media img {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Capability cards — explicit layout (don't rely on fragile utilities alone) */
+.capability-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .capability-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+}
+
+.capability-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: #fff;
+  padding: 0.75rem;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.07);
+}
+
+.capability-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f5f5f5;
+}
+
+.capability-media > span,
+.capability-media img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.capability-card:hover .capability-media img {
+  transform: scale(1.03);
+}
+
+.capability-body {
+  padding: 1rem 0.5rem 0.75rem;
+}
+
+.capability-body h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.35;
+}
+
+.capability-body p {
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: var(--fg-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capability-card,
+  .capability-card:hover,
+  .capability-media img {
+    transition: none !important;
+    transform: none !important;
+  }
+}

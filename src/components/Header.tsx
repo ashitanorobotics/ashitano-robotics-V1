@@ -16,15 +16,9 @@ export default function Header() {
           </span>
         </a>
 
-        <div className="pointer-events-none absolute left-1/2 hidden max-w-[min(52vw,640px)] -translate-x-1/2 items-center gap-3 lg:flex">
+        <div className="pointer-events-none absolute left-1/2 hidden -translate-x-1/2 lg:block">
           <span className="font-display text-lg font-semibold text-black">
             {site.productLine}
-          </span>
-          <span className="text-black/25" aria-hidden>
-            |
-          </span>
-          <span className="truncate text-base font-normal text-black/80">
-            {site.headerCaption}
           </span>
         </div>
 
