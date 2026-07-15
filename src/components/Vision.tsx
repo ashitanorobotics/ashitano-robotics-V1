@@ -11,7 +11,7 @@ export default function Vision() {
       <h2 id="vision-heading" className="section-heading-lg mx-auto">
         {vision.title}
       </h2>
-      <p className="mx-auto mt-6 max-w-[820px] text-center text-[clamp(16px,1.8vw,22px)] leading-relaxed text-black">
+      <p className="mx-auto mt-6 max-w-[820px] whitespace-pre-line text-center text-[clamp(16px,1.8vw,22px)] leading-relaxed text-black">
         {vision.subtitle}
       </p>
     </section>

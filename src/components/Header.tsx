@@ -4,8 +4,8 @@ import { site } from "@/constants/site";
 
 export default function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-[1001] h-20 bg-header backdrop-blur-[10px]">
-      <div className="flex h-full items-center justify-between gap-4 px-6">
+    <header className="fixed inset-x-0 top-0 z-[1001] h-20 max-w-[100%] overflow-x-clip bg-header backdrop-blur-[10px]">
+      <div className="relative mx-auto flex h-full max-w-[100%] items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6">
         <a href="#" className="flex min-w-0 items-center gap-2.5 sm:gap-3">
           <span
             className="h-7 w-7 shrink-0 rounded-full bg-black sm:h-8 sm:w-8 md:h-10 md:w-10"
@@ -30,7 +30,7 @@ export default function Header() {
 
         <a
           href="#request-demo-section"
-          className="shrink-0 rounded-[12px] bg-black px-4 py-2.5 text-base font-medium tracking-[-0.08px] text-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#333]"
+          className="shrink-0 rounded-[10px] bg-black px-3.5 py-2 text-sm font-medium tracking-[-0.08px] text-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#333] md:rounded-[12px] md:px-4 md:py-2.5 md:text-base"
         >
           お問い合わせ
         </a>

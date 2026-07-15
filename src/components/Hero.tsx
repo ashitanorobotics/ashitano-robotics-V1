@@ -8,9 +8,9 @@ function hasPublicFile(...parts: string[]) {
 }
 
 export default function Hero() {
-  const hasDesktop = hasPublicFile("images", "hero-vision.png");
-  const hasMobileVideo = hasPublicFile("videos", "hero-vision-mobile.mp4");
-  const hasMedia = hasDesktop || hasMobileVideo;
+  const hasDesktop = hasPublicFile("images", "hero-vision-desktop-v3.png");
+  const hasMobile = hasPublicFile("images", "hero-vision-mobile.png");
+  const hasMedia = hasDesktop || hasMobile;
 
   return (
     <div className="pt-[88px]">
@@ -21,36 +21,36 @@ export default function Hero() {
         >
           {hasMedia ? (
             <>
-              {hasMobileVideo ? (
-                <video
-                  className="absolute inset-0 h-full w-full object-cover object-center md:hidden"
-                  src="/videos/hero-vision-mobile.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  aria-label="人とヒューマノイドロボットが並び、未来を見据える様子"
+              {hasMobile ? (
+                <Image
+                  src="/images/hero-vision-mobile.png"
+                  alt="人とヒューマノイドロボットが並び、未来を見据える様子"
+                  fill
+                  priority
+                  quality={95}
+                  sizes="100vw"
+                  className="object-cover object-center md:hidden"
                 />
               ) : null}
               {hasDesktop ? (
                 <Image
-                  src="/images/hero-vision.png"
+                  src="/images/hero-vision-desktop-v3.png"
                   alt="人とヒューマノイドロボットが並び、未来を見据える様子"
                   fill
                   priority
+                  quality={95}
                   sizes="100vw"
                   className={
-                    hasMobileVideo
-                      ? "hidden object-cover object-center md:block"
-                      : "object-cover object-center"
+                    hasMobile
+                      ? "hidden object-cover object-[center_70%] md:block"
+                      : "object-cover object-[center_70%]"
                   }
                 />
               ) : null}
             </>
           ) : (
             <div className="flex h-full items-center justify-center text-sm text-black/40">
-              /images/hero-vision.png
+              /images/hero-vision-desktop-v3.png
             </div>
           )}
         </div>
@@ -62,7 +62,7 @@ export default function Hero() {
       >
         <h1
           id="hero-heading"
-          className="font-display whitespace-nowrap text-[clamp(28px,6vw,64px)] font-bold leading-[1.15] tracking-[-0.03em] text-black"
+          className="font-display text-[clamp(24px,7vw,64px)] font-bold leading-[1.15] tracking-[-0.03em] text-black md:whitespace-nowrap"
         >
           {site.nameEn}
         </h1>

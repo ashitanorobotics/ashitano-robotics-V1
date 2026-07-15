@@ -8,7 +8,10 @@ export default function Problem() {
       className="page-pad section-block"
       aria-labelledby="problem-heading"
     >
-      <h2 id="problem-heading" className="section-heading mx-auto">
+      <h2
+        id="problem-heading"
+        className="section-heading mx-auto whitespace-pre-line"
+      >
         {problem.title}
       </h2>
 

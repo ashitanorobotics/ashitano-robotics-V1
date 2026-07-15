@@ -36,14 +36,14 @@ export default function ContactCta() {
       className="bg-black px-6 py-[var(--section-y)] text-white lg:py-[var(--section-y-lg)]"
       aria-labelledby="contact-heading"
     >
-      <div className="mx-auto max-w-[500px] text-center">
+      <div className="mx-auto max-w-[640px] text-center">
         <h2
           id="contact-heading"
-          className="text-[clamp(28px,4vw,48px)] font-bold leading-[1.33] tracking-[-0.02em]"
+          className="text-[clamp(16px,4vw,48px)] font-bold leading-[1.33] tracking-[-0.02em] md:whitespace-nowrap"
         >
           {site.contact.title}
         </h2>
-        <p className="mt-4 text-[18px] leading-relaxed text-white/90">
+        <p className="mt-4 whitespace-pre-line text-[18px] leading-relaxed text-white/90">
           {site.contact.body}
         </p>
 
@@ -93,7 +93,7 @@ export default function ContactCta() {
 
           <button
             type="submit"
-            className="mt-4 flex w-full items-center justify-center rounded-[12px] border border-transparent bg-black px-6 py-3.5 text-base font-medium text-white shadow-[0_8px_40px_rgba(3,136,183,0.4)] transition hover:scale-[1.03] hover:border-white"
+            className="mt-4 flex w-full items-center justify-center rounded-[12px] border border-transparent bg-black px-6 py-3.5 text-base font-medium text-white shadow-[0_8px_40px_rgba(3,136,183,0.4)] transition hover:border-white md:hover:scale-[1.03]"
             style={{
               backgroundImage:
                 "linear-gradient(#000,#000), linear-gradient(90deg,#0388b7,#00d4ff)",

@@ -33,16 +33,16 @@ export default function Solution() {
         {solution.title}
       </h2>
 
-      <div className="relative mt-12 flex h-[min(52vh,480px)] items-center overflow-hidden rounded-[24px] bg-white lg:mt-14">
+      <div className="relative mt-12 flex h-[min(36vh,320px)] items-center justify-center overflow-hidden rounded-[24px] bg-white lg:mt-14">
         {robots.length > 0 ? (
-          <div className="grid h-full w-full min-h-0 grid-cols-2 gap-2 p-4 sm:gap-4 sm:p-6 lg:grid-cols-4 lg:gap-6 lg:p-8">
+          <div className="mx-auto grid h-full w-full max-w-[920px] min-h-0 grid-cols-2 gap-2 p-6 sm:gap-4 sm:p-8 lg:grid-cols-4 lg:gap-5 lg:p-10">
             {robots.map((img) => (
-              <div key={img.src} className="relative h-full w-full min-h-0">
+              <div key={img.src} className="relative h-full w-full min-h-0 scale-90">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 1024px) 40vw, 180px"
                   className="object-contain object-center"
                 />
               </div>
