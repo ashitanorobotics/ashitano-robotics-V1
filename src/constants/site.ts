@@ -1,98 +1,246 @@
-export const site = {
-  name: "あしたのロボティクス",
+const en = {
+  name: "ASHITANO Robotics",
   nameEn: "ASHITANO Robotics",
   productLine: "One Home, One Robot",
-  headerCaption: "Real World Interface. Made in Japan.",
   email: "contact@ashitanorobotics.co.jp",
-  tagline: "一家一台が、あたりまえになるまで。",
+  tagline: "Implementing robots in tomorrow's society",
   description:
-    "一家一台のロボット時代のために、ロボットと実世界の接続を強めます。導入・実証・活用の実装を通じて、暮らしに届くロボット社会をつくります。",
+    "We implement robots in tomorrow's society. Through humanoid-powered promotion at events and commercial spaces, we create the moments where people and robots meet.",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
   hero: {
-    subtitle: "Real World Interface.",
-    description: "一家一台ロボットの時代を目指して",
+    title: "Implementing Robots\nin Tomorrow's Society",
+    cta: "Contact Us",
+    alt: "A person and a humanoid robot standing side by side",
   },
-  problem: {
-    title: "ロボットと世界のあいだには、\nまだ距離がある",
-    items: [
-      {
-        number: "01",
-        title: "動ける ≠ 使える",
-        body: "ハードは進化した。それでも実環境に入ると止まる。理由は性能不足より、“使いどころ”と運用が整っていないことにある。",
-      },
-      {
-        number: "02",
-        title: "試して、初めて分かる",
-        body: "展示やデモでは分からないことがある。人と空間のあいだで試し、手応えを得て初めて、導入の形が見えてくる。",
-      },
-      {
-        number: "03",
-        title: "一家一台は、すぐには来ない",
-        body: "家庭も施設も、接続の積み重ねが前提になる。その実装を続けてこそ、距離は縮まる。",
-      },
-    ],
+  mission: {
+    statement:
+      "For robots to become part of everyday life, people first need to see them, approach them, and touch them.\nWe bring humanoids into the real world — creating the moments where people and robots meet.",
   },
   solution: {
-    title: "実世界との接続を、強化する",
-    emphasis: "One Home, One Robot のための接続を、実装する。",
+    title: "Humanoid Promotion",
+    lead: "We plan and deliver campaigns that use the presence of humanoid robots to attract, engage, and convert — at events, retail spaces, and beyond.",
     capabilities: [
       {
-        title: "用途に合わせて入れる",
+        title: "Attract attention",
         description:
-          "施設や事業、暮らしの文脈に合うロボットを選定し、導入の条件と運用を設計します。",
-        image: "/images/cap-use-v3.jpg",
+          "An unfamiliar presence stops people in their tracks. Attention comes naturally.",
+        image: "/images/cap-attract.jpg",
       },
       {
-        title: "実世界で確かめる",
+        title: "Create experiences",
         description:
-          "店舗、施設、イベントなど、人がいる場所で実証し、机上の可能性を実際の手応えに変えます。",
-        image: "/images/cap-verify-v3.jpg",
+          "Not just a display — we design moments people want to photograph and share.",
+        image: "/images/cap-experience-v2.jpg",
       },
       {
-        title: "体験として広げる",
+        title: "Drive action",
         description:
-          "ヒューマノイドの存在感を活かし、プロモーションや体験施策を通じて社会接点をつくります。",
-        image: "/images/cap-experience-v3.jpg",
-      },
-    ],
-  },
-  unique: {
-    title: "接続を強くする、三つの実装",
-    items: [
-      {
-        title: "ロボット導入支援",
-        description:
-          "適した機体の選定から、導入条件・運用設計まで。実環境に“接続できる形”へ整えます。",
-        tags: ["選定", "導入設計", "運用"],
-      },
-      {
-        title: "実証実験の企画・運営",
-        description:
-          "商業施設、イベント、店舗などの実環境で検証し、一家一台への道筋を具体化します。",
-        tags: ["フィールド", "実証", "検証"],
-      },
-      {
-        title: "プロモーション活用",
-        description:
-          "ヒューマノイドの注目性を、集客・広告・イベントの体験設計へつなぎます。",
-        tags: ["体験", "集客", "発信"],
-      },
-      {
-        title: "構想からの伴走",
-        description:
-          "「何から始めるか」を一緒に定め、実世界に届くステップを描きます。",
-        tags: ["構想", "要件整理", "伴走"],
+          "QR codes, social posts, sign-ups: we turn attention into concrete next steps.",
+        image: "/images/cap-action.jpg",
       },
     ],
   },
   vision: {
-    title: "一家一台に向けて。",
-    subtitle:
-      "私たちは、ロボットが特別ではなく、家庭に一台あるのが前提の社会を作ります。",
+    title: "From streets to stores.\nFrom stores to homes.",
+    body: "First, we grow the places where people and robots meet.\nThe insights we gain expand where robots work — and where they live.\n\nWe don't just talk about a distant future.\nWe build the everyday of robots, one real-world site at a time.",
+    closing: "One Home, One Robot.",
   },
   contact: {
-    title: "まずは、ご相談ください",
-    body: "導入、実証、体験設計。\n構想の段階から、一緒に整理します。",
-    cta: "お問い合わせ",
+    title: "Let's build your next project,\nrobots included.",
+    body: "Events, retail, product launches — tell us what you have in mind,\nand we'll explore how humanoids can make it work.",
+    cta: "Contact Us",
+    submit: "Send",
+    form: {
+      email: "Email (required)",
+      company: "Company / Organization (required)",
+      role: "Name / Role (optional)",
+      message: "Message (optional)",
+      messagePlaceholder: "Timing, location, goals — anything helps.",
+      hint: "Your email app will open. Messages go to",
+      subject: "Inquiry",
+      bodyLabels: {
+        email: "Email",
+        company: "Company / Organization",
+        role: "Name / Role",
+      },
+    },
+  },
+  footer: {
+    contact: "Contact",
+    company: "Company",
+    privacy: "Privacy Policy",
+  },
+  company: {
+    title: "Company",
+    rows: [
+      { label: "Company Name", value: "ASHITANO Robotics" },
+      {
+        label: "Business",
+        value:
+          "Planning, production, and operation of humanoid-powered promotion; robot implementation support",
+      },
+      { label: "Location", value: "Tokyo, Japan" },
+      { label: "Contact", value: "contact@ashitanorobotics.co.jp" },
+    ],
+  },
+  privacy: {
+    title: "Privacy Policy",
+    intro:
+      "ASHITANO Robotics (\u201cwe\u201d) respects your privacy. This policy explains how we handle personal information received through this website and our services.",
+    sections: [
+      {
+        heading: "1. Information We Collect",
+        body: "We collect information you provide through our contact form or by email, such as your name, email address, and company or organization.",
+      },
+      {
+        heading: "2. How We Use Information",
+        body: "We use personal information to respond to inquiries, plan and deliver our services, and share information relevant to your request. We do not use it for any other purpose without your consent.",
+      },
+      {
+        heading: "3. Sharing with Third Parties",
+        body: "We do not provide personal information to third parties without your prior consent, except where required by law.",
+      },
+      {
+        heading: "4. Security",
+        body: "We take reasonable organizational and technical measures to protect personal information against loss, misuse, and unauthorized access.",
+      },
+      {
+        heading: "5. Disclosure and Correction",
+        body: "If you wish to access, correct, or delete your personal information, please contact us using the address below. We will respond promptly after confirming your identity.",
+      },
+      {
+        heading: "6. Contact",
+        body: "For questions about this policy or your personal information, please contact: contact@ashitanorobotics.co.jp",
+      },
+    ],
   },
 } as const;
+
+const ja = {
+  name: "あしたのロボティクス",
+  nameEn: "ASHITANO Robotics",
+  productLine: "One Home, One Robot",
+  email: "contact@ashitanorobotics.co.jp",
+  tagline: "あしたの社会にロボットを実装する",
+  description:
+    "あしたの社会にロボットを実装する。イベントや商業施設でのヒューマノイドプロモーションを通じて、人とロボットが出会う機会をつくります。",
+  copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
+  hero: {
+    title: "あしたの社会に\nロボットを実装する",
+    cta: "お問い合わせ",
+    alt: "人とヒューマノイドロボットが並び、未来を見据える様子",
+  },
+  mission: {
+    statement:
+      "ロボットが日常に入るためには、まず人が実際に見て、近づき、触れる必要があります。\n私たちはヒューマノイドを実世界へ連れ出し、人とロボットが出会う瞬間をつくります。",
+  },
+  solution: {
+    title: "ロボットを活用したプロモーション",
+    lead: "イベントや商業施設などで、ヒューマノイドの存在感を活かした集客・告知施策を企画、実施します。",
+    capabilities: [
+      {
+        title: "人を惹きつける",
+        description:
+          "見慣れない存在だからこそ、人が足を止め、自然な注目が生まれます。",
+        image: "/images/cap-attract.jpg",
+      },
+      {
+        title: "体験をつくる",
+        description:
+          "ただ展示するのではなく、撮影や交流が生まれる場を設計します。",
+        image: "/images/cap-experience-v2.jpg",
+      },
+      {
+        title: "次の行動につなげる",
+        description:
+          "QRコードやSNS、イベントへの参加など、注目を具体的な行動へつなげます。",
+        image: "/images/cap-action.jpg",
+      },
+    ],
+  },
+  vision: {
+    title: "街から、店舗へ。\n店舗から、家庭へ。",
+    body: "まずは、人とロボットが出会う場所を増やす。\nそこで得た知見を蓄積し、ロボットが働く場所、暮らす場所を広げていく。\n\n遠い未来を語るだけではなく、\n目の前の現場から、ロボットの当たり前をつくります。",
+    closing: "One Home, One Robot.",
+  },
+  contact: {
+    title: "ロボットを活用した企画を、\n一緒につくりませんか。",
+    body: "イベント、店舗、プロモーションなど、\nヒューマノイドの活用についてご相談ください。",
+    cta: "お問い合わせ",
+    submit: "送信する",
+    form: {
+      email: "メールアドレス（必須）",
+      company: "会社・組織名（必須）",
+      role: "ご担当（任意）",
+      message: "メッセージ（任意）",
+      messagePlaceholder: "実施時期、場所、目的など、分かる範囲でご記入ください。",
+      hint: "メールアプリが開きます。送信先は",
+      subject: "お問い合わせ",
+      bodyLabels: {
+        email: "メール",
+        company: "会社・組織",
+        role: "ご担当",
+      },
+    },
+  },
+  footer: {
+    contact: "お問い合わせ",
+    company: "会社概要",
+    privacy: "プライバシーポリシー",
+  },
+  company: {
+    title: "会社概要",
+    rows: [
+      { label: "社名", value: "あしたのロボティクス（ASHITANO Robotics）" },
+      {
+        label: "事業内容",
+        value:
+          "ヒューマノイドを活用したプロモーションの企画・制作・運営、ロボットの社会実装支援",
+      },
+      { label: "所在地", value: "東京都" },
+      { label: "連絡先", value: "contact@ashitanorobotics.co.jp" },
+    ],
+  },
+  privacy: {
+    title: "プライバシーポリシー",
+    intro:
+      "あしたのロボティクス（以下「当社」）は、お客様のプライバシーを尊重し、当ウェブサイトおよびサービスを通じて取得した個人情報を以下のとおり取り扱います。",
+    sections: [
+      {
+        heading: "1. 取得する情報",
+        body: "お問い合わせフォームやメールを通じて、お名前、メールアドレス、会社・組織名などの情報を取得します。",
+      },
+      {
+        heading: "2. 利用目的",
+        body: "取得した個人情報は、お問い合わせへの対応、サービスの企画・提供、ご依頼に関する情報のご案内のために利用します。ご同意なくその他の目的で利用することはありません。",
+      },
+      {
+        heading: "3. 第三者への提供",
+        body: "法令に基づく場合を除き、ご本人の同意なく個人情報を第三者に提供することはありません。",
+      },
+      {
+        heading: "4. 安全管理",
+        body: "個人情報の紛失、不正利用、不正アクセスを防止するため、合理的な組織的・技術的安全管理措置を講じます。",
+      },
+      {
+        heading: "5. 開示・訂正・削除",
+        body: "ご自身の個人情報の開示・訂正・削除をご希望の場合は、下記の連絡先までご連絡ください。ご本人であることを確認のうえ、速やかに対応します。",
+      },
+      {
+        heading: "6. お問い合わせ窓口",
+        body: "本ポリシーおよび個人情報の取り扱いに関するお問い合わせは、contact@ashitanorobotics.co.jp までご連絡ください。",
+      },
+    ],
+  },
+} as const;
+
+export const dictionaries = { en, ja };
+export type Locale = keyof typeof dictionaries;
+export type SiteContent = (typeof dictionaries)[Locale];
+
+export function getSite(locale: Locale): SiteContent {
+  return dictionaries[locale];
+}
+
+// Default dictionary (used by root metadata etc.)
+export const site = en;

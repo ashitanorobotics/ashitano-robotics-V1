@@ -1,27 +1,33 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { site } from "@/constants/site";
+import { getSite, type Locale } from "@/constants/site";
 import Reveal from "@/components/Reveal";
 
-export default function ContactCta() {
+const inputClassName =
+  "w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/30 focus:border-[var(--accent)] focus:shadow-[0_0_0_4px_rgba(3,136,183,0.15)]";
+
+export default function ContactCta({ locale }: { locale: Locale }) {
+  const site = getSite(locale);
+  const { form } = site.contact;
   const [sentHint, setSentHint] = useState(false);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
+    const data = new FormData(e.currentTarget);
     const email = String(data.get("email") || "");
     const company = String(data.get("company") || "");
     const role = String(data.get("role") || "");
     const message = String(data.get("message") || "");
 
-    const subject = encodeURIComponent(`お問い合わせ（${company || site.nameEn}）`);
+    const subject = encodeURIComponent(
+      `${form.subject} (${company || site.nameEn})`,
+    );
     const body = encodeURIComponent(
       [
-        `メール: ${email}`,
-        `会社・組織: ${company}`,
-        `ご担当: ${role}`,
+        `${form.bodyLabels.email}: ${email}`,
+        `${form.bodyLabels.company}: ${company}`,
+        `${form.bodyLabels.role}: ${role || "—"}`,
         "",
         message,
       ].join("\n"),
@@ -41,7 +47,7 @@ export default function ContactCta() {
         <div className="mx-auto max-w-[640px] text-center">
           <h2
             id="contact-heading"
-            className="section-heading-lg mx-auto"
+            className="section-heading-lg mx-auto whitespace-pre-line"
           >
             {site.contact.title}
           </h2>
@@ -58,44 +64,43 @@ export default function ContactCta() {
         >
           <label className="block">
             <span className="mb-2 block text-sm text-white/70">
-              メールアドレス（必須）
+              {form.email}
             </span>
             <input
               required
               name="email"
               type="email"
-              className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none transition focus:border-[var(--accent)] focus:shadow-[0_0_0_4px_rgba(3,136,183,0.15)]"
+              autoComplete="email"
+              className={inputClassName}
             />
           </label>
           <label className="block">
             <span className="mb-2 block text-sm text-white/70">
-              会社・組織名（必須）
+              {form.company}
             </span>
             <input
               required
               name="company"
               type="text"
-              className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none transition focus:border-[var(--accent)] focus:shadow-[0_0_0_4px_rgba(3,136,183,0.15)]"
+              autoComplete="organization"
+              className={inputClassName}
             />
           </label>
           <label className="block">
             <span className="mb-2 block text-sm text-white/70">
-              ご担当（任意）
+              {form.role}
             </span>
-            <input
-              name="role"
-              type="text"
-              className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none transition focus:border-[var(--accent)] focus:shadow-[0_0_0_4px_rgba(3,136,183,0.15)]"
-            />
+            <input name="role" type="text" className={inputClassName} />
           </label>
           <label className="block">
             <span className="mb-2 block text-sm text-white/70">
-              メッセージ（任意）
+              {form.message}
             </span>
             <textarea
               name="message"
               rows={4}
-              className="w-full resize-y rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none transition focus:border-[var(--accent)] focus:shadow-[0_0_0_4px_rgba(3,136,183,0.15)]"
+              placeholder={form.messagePlaceholder}
+              className={`${inputClassName} resize-y`}
             />
           </label>
 
@@ -110,11 +115,11 @@ export default function ContactCta() {
               border: "1px solid transparent",
             }}
           >
-            送信する
+            {site.contact.submit}
           </button>
           {sentHint && (
             <p className="text-center text-sm text-white/60">
-              メールアプリが開きます。送信先は {site.email} です。
+              {form.hint} {site.email}
             </p>
           )}
         </form>

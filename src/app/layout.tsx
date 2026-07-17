@@ -14,7 +14,7 @@ const hostGrotesk = Host_Grotesk({
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ja"
+      lang="en"
       className={`${hostGrotesk.variable} ${montserrat.variable} ${notoSansJp.variable} h-full antialiased`}
     >
       <body className="min-h-full max-w-full overflow-x-clip bg-bg font-sans text-fg antialiased">

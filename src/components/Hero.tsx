@@ -1,24 +1,26 @@
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
-import { site } from "@/constants/site";
+import { ArrowUpRight } from "lucide-react";
+import { getSite, type Locale } from "@/constants/site";
 import Reveal from "@/components/Reveal";
 
 function hasPublicFile(...parts: string[]) {
   return fs.existsSync(path.join(process.cwd(), "public", ...parts));
 }
 
-export default function Hero() {
+export default function Hero({ locale }: { locale: Locale }) {
+  const site = getSite(locale);
   const hasDesktop = hasPublicFile("images", "hero-vision-desktop-v3.png");
   const hasMobile = hasPublicFile("images", "hero-vision-mobile.png");
   const hasMedia = hasDesktop || hasMobile;
 
   return (
     <div className="pt-20">
-      <section className="page-pad" aria-label="メインビジュアル">
+      <section className="page-pad" aria-labelledby="hero-heading">
         <Reveal preset="hero-media" className="block w-full">
           <div
-            className="motion-hero-frame relative overflow-hidden rounded-[24px] bg-white"
+            className="motion-hero-frame relative overflow-hidden rounded-[24px] bg-black"
             style={{ height: "calc(100vh - 112px)" }}
           >
             <div className="motion-hero-media absolute inset-0">
@@ -27,7 +29,7 @@ export default function Hero() {
                   {hasMobile ? (
                     <Image
                       src="/images/hero-vision-mobile.png"
-                      alt="人とヒューマノイドロボットが並び、未来を見据える様子"
+                      alt={site.hero.alt}
                       fill
                       priority
                       quality={95}
@@ -38,7 +40,7 @@ export default function Hero() {
                   {hasDesktop ? (
                     <Image
                       src="/images/hero-vision-desktop-v3.png"
-                      alt="人とヒューマノイドロボットが並び、未来を見据える様子"
+                      alt={site.hero.alt}
                       fill
                       priority
                       quality={95}
@@ -52,36 +54,35 @@ export default function Hero() {
                   ) : null}
                 </>
               ) : (
-                <div className="flex h-full items-center justify-center text-sm text-black/40">
+                <div className="flex h-full items-center justify-center text-sm text-white/40">
                   /images/hero-vision-desktop-v3.png
                 </div>
               )}
             </div>
-          </div>
-        </Reveal>
-      </section>
 
-      <section
-        className="page-pad section-block motion-hero-copy flex flex-col items-center gap-6 text-center"
-        aria-labelledby="hero-heading"
-      >
-        <Reveal preset="hero-title" className="w-full">
-          <h1
-            id="hero-heading"
-            className="font-display text-[clamp(24px,7vw,64px)] font-bold leading-[1.15] tracking-[-0.03em] text-black md:whitespace-nowrap"
-          >
-            {site.nameEn}
-          </h1>
-        </Reveal>
-        <Reveal preset="hero-line" delayMs={120} className="w-full">
-          <p className="text-[18px] font-normal leading-[1.5] text-black sm:text-[20px]">
-            {site.hero.subtitle}
-          </p>
-        </Reveal>
-        <Reveal preset="hero-line" delayMs={240} className="w-full">
-          <p className="mx-auto max-w-[880px] whitespace-pre-line text-[clamp(16px,2vw,24px)] font-medium leading-[1.6] text-black">
-            {site.hero.description}
-          </p>
+            <div
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent"
+              aria-hidden
+            />
+
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-14">
+              <div className="flex flex-col items-start gap-8">
+                <h1
+                  id="hero-heading"
+                    className="font-display whitespace-pre-line text-[clamp(34px,5.5vw,76px)] font-normal leading-[1.1] tracking-[-0.02em] text-white"
+                >
+                  {site.hero.title}
+                </h1>
+                <a
+                  href="#request-demo-section"
+                  className="primary-button primary-button-light inline-flex items-center gap-1.5"
+                >
+                  {site.hero.cta}
+                  <ArrowUpRight size={18} strokeWidth={2} />
+                </a>
+              </div>
+            </div>
+          </div>
         </Reveal>
       </section>
     </div>

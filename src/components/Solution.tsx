@@ -1,77 +1,33 @@
 import Image from "next/image";
-import fs from "fs";
-import path from "path";
-import { site } from "@/constants/site";
+import { getSite, type Locale } from "@/constants/site";
 import Reveal from "@/components/Reveal";
 
-const ROBOT_IMAGES = [
-  { src: "/images/fv-1.png", alt: "ヒューマノイドロボット 01" },
-  { src: "/images/fv-2.png", alt: "ヒューマノイドロボット 02" },
-  { src: "/images/fv-3.png", alt: "ヒューマノイドロボット 03" },
-  { src: "/images/fv-4.png", alt: "ヒューマノイドロボット 04" },
-] as const;
-
-function publicPathExists(src: string) {
-  return fs.existsSync(
-    path.join(process.cwd(), "public", src.replace(/^\//, "")),
-  );
-}
-
-function existingRobotImages() {
-  return ROBOT_IMAGES.filter((img) => publicPathExists(img.src));
-}
-
-export default function Solution() {
-  const { solution } = site;
-  const robots = existingRobotImages();
+export default function Solution({ locale }: { locale: Locale }) {
+  const { solution } = getSite(locale);
 
   return (
     <section
       className="page-pad section-block"
       aria-labelledby="solution-heading"
     >
-      <Reveal>
-        <h2 id="solution-heading" className="section-heading mx-auto">
-          {solution.title}
-        </h2>
-      </Reveal>
-
-      <Reveal delayMs={80}>
-        <div className="relative mt-12 flex h-[min(36vh,320px)] items-center justify-center overflow-hidden rounded-[24px] bg-white lg:mt-14">
-          {robots.length > 0 ? (
-            <div className="mx-auto grid h-full w-full max-w-[920px] min-h-0 grid-cols-2 gap-2 p-6 sm:gap-4 sm:p-8 lg:grid-cols-4 lg:gap-5 lg:p-10">
-              {robots.map((img, index) => (
-                <Reveal
-                  key={img.src}
-                  delayMs={120 + index * 80}
-                  className="relative h-full w-full min-h-0 scale-90"
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    sizes="(max-width: 1024px) 40vw, 180px"
-                    className="object-contain object-center"
-                  />
-                </Reveal>
-              ))}
-            </div>
-          ) : null}
-        </div>
-      </Reveal>
-
-      <Reveal delayMs={100}>
-        <div className="mx-auto mt-14 max-w-[880px] text-center lg:mt-16">
-          <p className="text-[20px] font-medium leading-relaxed text-black sm:text-[22px]">
-            {solution.emphasis}
+      <div className="mx-auto w-full max-w-[1280px]">
+        <Reveal>
+          <h2
+            id="solution-heading"
+            className="mx-auto max-w-[900px] text-center text-[clamp(22px,3vw,36px)] font-bold leading-[1.4] tracking-[-0.02em] text-black"
+          >
+            {solution.title}
+          </h2>
+        </Reveal>
+        <Reveal delayMs={120}>
+          <p className="mx-auto mt-5 max-w-[720px] whitespace-pre-line text-center text-[clamp(15px,1.6vw,18px)] leading-relaxed text-muted">
+            {solution.lead}
           </p>
-        </div>
-      </Reveal>
+        </Reveal>
 
-      <div className="capability-grid">
-        {solution.capabilities.map((cap, index) => (
-          <Reveal key={cap.title} delayMs={index * 110}>
-            <article className="capability-card">
+        <div className="capability-grid">
+          {solution.capabilities.map((cap) => (
+            <article key={cap.title} className="capability-card">
               <div className="capability-media">
                 <Image
                   src={cap.image}
@@ -86,8 +42,8 @@ export default function Solution() {
                 <p>{cap.description}</p>
               </div>
             </article>
-          </Reveal>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

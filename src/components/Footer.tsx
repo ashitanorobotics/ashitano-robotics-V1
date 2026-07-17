@@ -1,9 +1,16 @@
-import { site } from "@/constants/site";
+import { getSite, type Locale } from "@/constants/site";
 
-export default function Footer() {
+export default function Footer({ locale }: { locale: Locale }) {
+  const site = getSite(locale);
+  const prefix = locale === "ja" ? "/ja" : "";
+  const links = [
+    { label: site.footer.company, href: `${prefix}/company` },
+    { label: site.footer.privacy, href: `${prefix}/privacy` },
+    { label: site.footer.contact, href: `${prefix || "/"}#request-demo-section` },
+  ];
+
   return (
     <footer className="border-t border-black/10 bg-white">
-      {/* 他セクションと同じ: 外側 page-pad → 内側 max 1280 */}
       <div className="page-pad">
         <div
           className="mx-auto py-14"
@@ -11,16 +18,10 @@ export default function Footer() {
         >
           <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
             <div className="min-w-0">
-              <div className="flex items-center gap-2.5 sm:gap-3">
-                <span
-                  className="h-7 w-7 shrink-0 rounded-full bg-black sm:h-8 sm:w-8 md:h-10 md:w-10"
-                  aria-hidden
-                />
-                <p className="font-display text-base font-bold leading-[1.45] tracking-[-0.02em] text-black sm:text-lg md:text-2xl md:tracking-[-0.48px]">
-                  {site.nameEn}
-                </p>
-              </div>
-              <p className="mt-2 text-sm text-tertiary">{site.name}</p>
+              <p className="font-display text-base font-bold leading-[1.45] tracking-[-0.02em] text-black sm:text-lg md:text-2xl md:tracking-[-0.48px]">
+                {site.nameEn}
+              </p>
+              <p className="mt-2 text-sm text-tertiary">{site.tagline}</p>
               <a
                 href={`mailto:${site.email}`}
                 className="mt-3 inline-block text-sm text-tertiary transition hover:text-black"
@@ -28,16 +29,18 @@ export default function Footer() {
                 {site.email}
               </a>
             </div>
-            <nav aria-label="フッター" className="sm:pt-1">
+            <nav aria-label="Footer" className="sm:pt-1">
               <ul className="flex flex-col gap-3 sm:items-end">
-                <li>
-                  <a
-                    href="#request-demo-section"
-                    className="text-sm text-tertiary transition hover:text-black"
-                  >
-                    お問い合わせ
-                  </a>
-                </li>
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className="text-sm text-tertiary transition hover:text-black"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
