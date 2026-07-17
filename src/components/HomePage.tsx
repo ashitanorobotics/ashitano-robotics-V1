@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Mission from "@/components/Mission";
 import Solution from "@/components/Solution";
 import Vision from "@/components/Vision";
 import ContactCta from "@/components/ContactCta";
@@ -13,7 +12,6 @@ export default function HomePage({ locale }: { locale: Locale }) {
       <Header locale={locale} />
       <main>
         <Hero locale={locale} />
-        <Mission locale={locale} />
         <Solution locale={locale} />
         <Vision locale={locale} />
         <ContactCta locale={locale} />

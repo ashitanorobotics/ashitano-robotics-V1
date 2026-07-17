@@ -2,21 +2,26 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { getSite, type Locale } from "@/constants/site";
 import Reveal from "@/components/Reveal";
+import MediaFrame from "@/components/MediaFrame";
 
 export default function Vision({ locale }: { locale: Locale }) {
   const { vision } = getSite(locale);
   const titleLines = vision.title.split("\n");
 
   return (
-    <section className="page-pad section-block" aria-labelledby="vision-heading">
-      <Reveal className="mx-auto w-full max-w-[1400px]">
-        <div className="relative overflow-hidden rounded-[24px] px-6 py-20 text-white sm:px-12 lg:px-20 lg:py-28">
+    <section
+      id="vision-section"
+      className="page-pad section-block"
+      aria-labelledby="vision-heading"
+    >
+      <Reveal className="block w-full">
+        <MediaFrame className="px-6 py-20 text-white sm:px-12 lg:px-20 lg:py-28">
           <Image
             src="/images/vision-robots.jpg"
             alt=""
             fill
             quality={85}
-            sizes="(max-width: 1400px) 100vw, 1400px"
+            sizes="100vw"
             className="object-cover object-center"
             aria-hidden
           />
@@ -31,7 +36,6 @@ export default function Vision({ locale }: { locale: Locale }) {
                 <Fragment key={line}>
                   {line}
                   {i < titleLines.length - 1 && (
-                    /* 日本語はモバイルのみ改行、英語は常に改行 */
                     <br className={locale === "ja" ? "md:hidden" : undefined} />
                   )}
                 </Fragment>
@@ -44,7 +48,7 @@ export default function Vision({ locale }: { locale: Locale }) {
               {vision.closing}
             </p>
           </div>
-        </div>
+        </MediaFrame>
       </Reveal>
     </section>
   );

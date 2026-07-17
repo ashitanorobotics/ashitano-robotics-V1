@@ -3,40 +3,43 @@ const en = {
   nameEn: "ASHITANO Robotics",
   productLine: "One Home, One Robot",
   email: "contact@ashitanorobotics.co.jp",
-  tagline: "Implementing robots in tomorrow's society",
+  tagline: "Building tomorrow's society through robotics",
   description:
-    "We implement robots in tomorrow's society. Through humanoid-powered promotion at events and commercial spaces, we create the moments where people and robots meet.",
+    "Building tomorrow's society through robotics. Through humanoid-powered promotion at events and commercial spaces, we create the moments where people and robots meet.",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
+  nav: {
+    solution: "Humanoid Promotion",
+    vision: "Vision",
+    contact: "Contact",
+  },
   hero: {
-    title: "Implementing Robots\nin Tomorrow's Society",
+    title: "Building Tomorrow's Society\nThrough Robotics",
     cta: "Contact Us",
+    sub: "We bring humanoids into the real world — creating encounters that make robots part of everyday life.",
     alt: "A person and a humanoid robot standing side by side",
   },
-  mission: {
-    statement:
-      "For robots to become part of everyday life, people first need to see them, approach them, and touch them.\nWe bring humanoids into the real world — creating the moments where people and robots meet.",
-  },
   solution: {
-    title: "Humanoid Promotion",
-    lead: "We plan and deliver campaigns that use the presence of humanoid robots to attract, engage, and convert — at events, retail spaces, and beyond.",
+    statement:
+      "We plan and deliver campaigns that use the presence of humanoid robots to attract, engage, and convert — at events, retail spaces, and beyond.",
+    cardCta: "Contact Us",
     capabilities: [
       {
         title: "Attract attention",
         description:
           "An unfamiliar presence stops people in their tracks. Attention comes naturally.",
-        image: "/images/cap-attract.jpg",
+        image: "/images/cap-attract-g1-v5.png",
       },
       {
         title: "Create experiences",
         description:
           "Not just a display — we design moments people want to photograph and share.",
-        image: "/images/cap-experience-v2.jpg",
+        image: "/images/cap-experience-g1-v5.png",
       },
       {
         title: "Drive action",
         description:
           "QR codes, social posts, sign-ups: we turn attention into concrete next steps.",
-        image: "/images/cap-action.jpg",
+        image: "/images/cap-action-g1-v5.png",
       },
     ],
   },
@@ -121,46 +124,49 @@ const ja = {
   nameEn: "ASHITANO Robotics",
   productLine: "One Home, One Robot",
   email: "contact@ashitanorobotics.co.jp",
-  tagline: "あしたの社会にロボットを実装する",
+  tagline: "ロボティクスで、あしたの社会を構築する",
   description:
-    "あしたの社会にロボットを実装する。イベントや商業施設でのヒューマノイドプロモーションを通じて、人とロボットが出会う機会をつくります。",
+    "ロボティクスで、あしたの社会を構築する。イベントや商業施設でのヒューマノイドプロモーションを通じて、人とロボットが出会う機会をつくります。",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
+  nav: {
+    solution: "ロボットプロモーション",
+    vision: "ビジョン",
+    contact: "お問い合わせ",
+  },
   hero: {
-    title: "あしたの社会に\nロボットを実装する",
+    title: "ロボティクスで、\nあしたの社会を構築する",
     cta: "お問い合わせ",
+    sub: "ヒューマノイドを街や店舗へ。\n人が立ち止まる、出会いの場をつくります。",
     alt: "人とヒューマノイドロボットが並び、未来を見据える様子",
   },
-  mission: {
-    statement:
-      "ロボットが日常に入るためには、まず人が実際に見て、近づき、触れる必要があります。\n私たちはヒューマノイドを実世界へ連れ出し、人とロボットが出会う瞬間をつくります。",
-  },
   solution: {
-    title: "ロボットを活用したプロモーション",
-    lead: "イベントや商業施設などで、ヒューマノイドの存在感を活かした集客・告知施策を企画、実施します。",
+    statement:
+      "イベントや商業施設などで、\nヒューマノイドの存在感を活かした\n集客・告知施策を企画、実施します。",
+    cardCta: "お問い合わせ",
     capabilities: [
       {
         title: "人を惹きつける",
         description:
-          "見慣れない存在だからこそ、人が足を止め、自然な注目が生まれます。",
-        image: "/images/cap-attract.jpg",
+          "見慣れない存在だからこそ、\n人が足を止め、自然な注目が生まれます。",
+        image: "/images/cap-attract-g1-v5.png",
       },
       {
         title: "体験をつくる",
         description:
-          "ただ展示するのではなく、撮影や交流が生まれる場を設計します。",
-        image: "/images/cap-experience-v2.jpg",
+          "ただ展示するのではなく、\n撮影や交流が生まれる場を設計します。",
+        image: "/images/cap-experience-g1-v5.png",
       },
       {
         title: "次の行動につなげる",
         description:
-          "QRコードやSNS、イベントへの参加など、注目を具体的な行動へつなげます。",
-        image: "/images/cap-action.jpg",
+          "QRコードやSNS、イベントへの参加など、\n注目を具体的な行動へつなげます。",
+        image: "/images/cap-action-g1-v5.png",
       },
     ],
   },
   vision: {
     title: "街から、店舗へ。\n店舗から、家庭へ。",
-    body: "まずは、人とロボットが出会う場所を増やす。\nそこで得た知見を蓄積し、ロボットが働く場所、暮らす場所を広げていく。\n\n遠い未来を語るだけではなく、\n目の前の現場から、ロボットの当たり前をつくります。",
+    body: "まずは、人とロボットが出会う場所を増やす。\nそこで得た知見を蓄積し、\nロボットが働く場所、暮らす場所を広げていく。\n\n遠い未来を語るだけではなく、\n目の前の現場から、\nロボットの当たり前をつくります。",
     closing: "One Home, One Robot.",
   },
   contact: {
