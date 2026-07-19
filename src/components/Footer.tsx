@@ -18,9 +18,16 @@ export default function Footer({ locale }: { locale: Locale }) {
         >
           <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
             <div className="min-w-0">
-              <p className="font-display text-base font-bold leading-[1.45] tracking-[-0.02em] text-black sm:text-lg md:text-2xl md:tracking-[-0.48px]">
-                {site.nameEn}
-              </p>
+              <div className="footer-company">
+                <span className="company-logo-box" aria-hidden="true">
+                  <img
+                    src="/images/logo-mark.png"
+                    alt=""
+                    className="company-logo company-logo-mark"
+                  />
+                </span>
+                <span className="company-name">{site.nameEn}</span>
+              </div>
               <p className="mt-2 text-sm text-tertiary">{site.tagline}</p>
               <a
                 href={`mailto:${site.email}`}

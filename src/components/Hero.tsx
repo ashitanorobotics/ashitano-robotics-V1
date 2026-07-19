@@ -12,12 +12,8 @@ function hasPublicFile(...parts: string[]) {
 
 export default function Hero({ locale }: { locale: Locale }) {
   const site = getSite(locale);
-  const hasDesktop =
-    hasPublicFile("images", "hero-vision-desktop-v5.png") ||
-    hasPublicFile("images", "hero-vision-desktop-v4.png");
-  const desktopSrc = hasPublicFile("images", "hero-vision-desktop-v5.png")
-    ? "/images/hero-vision-desktop-v5.png"
-    : "/images/hero-vision-desktop-v4.png";
+  const hasDesktop = hasPublicFile("images", "hero-vision-desktop-v5.png");
+  const desktopSrc = "/images/hero-vision-desktop-v5.png";
   const hasMobile = hasPublicFile("images", "hero-vision-mobile.png");
   const hasMedia = hasDesktop || hasMobile;
   const titleLines = site.hero.title.split("\n");

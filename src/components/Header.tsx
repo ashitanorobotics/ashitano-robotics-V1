@@ -42,6 +42,13 @@ export default function Header({ locale }: { locale: Locale }) {
     >
       <div className="header-inner">
         <a href={home} className="header-company">
+          <span className="company-logo-box" aria-hidden="true">
+            <img
+              src="/images/logo-mark.png"
+              alt=""
+              className="company-logo company-logo-mark"
+            />
+          </span>
           <span className="company-name">{site.nameEn}</span>
         </a>
 
