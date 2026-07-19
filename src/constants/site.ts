@@ -77,12 +77,17 @@ const en = {
     title: "Company",
     rows: [
       { label: "Company Name", value: "ASHITANO Robotics" },
+      { label: "Representative", value: "Yumiki Hara" },
+      {
+        label: "Address",
+        value:
+          "MIEUX Shibuya Building 8F\n5-3 Maruyama-cho, Shibuya-ku\nTokyo 150-0044, Japan",
+      },
       {
         label: "Business",
         value:
           "Planning, production, and operation of humanoid-powered promotion; robot implementation support",
       },
-      { label: "Location", value: "Tokyo, Japan" },
       { label: "Contact", value: "contact@ashitanorobotics.co.jp" },
     ],
   },
@@ -198,12 +203,16 @@ const ja = {
     title: "会社概要",
     rows: [
       { label: "社名", value: "あしたのロボティクス株式会社" },
+      { label: "代表者", value: "原優水輝" },
+      {
+        label: "所在地",
+        value: "〒150-0044\n東京都渋谷区円山町5-3\nMIEUX渋谷ビル8階",
+      },
       {
         label: "事業内容",
         value:
           "ヒューマノイドを活用したプロモーションの企画・制作・運営、ロボットの社会実装支援",
       },
-      { label: "所在地", value: "東京都" },
       { label: "連絡先", value: "contact@ashitanorobotics.co.jp" },
     ],
   },

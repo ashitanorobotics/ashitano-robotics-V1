@@ -26,7 +26,7 @@ export default function CompanyPage({ locale }: { locale: Locale }) {
                   <dt className="text-sm font-medium text-tertiary sm:pt-0.5">
                     {row.label}
                   </dt>
-                  <dd className="text-base leading-relaxed text-black">
+                  <dd className="whitespace-pre-line text-base leading-relaxed text-black">
                     {row.value}
                   </dd>
                 </div>
