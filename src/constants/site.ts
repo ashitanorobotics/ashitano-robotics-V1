@@ -8,7 +8,7 @@ const en = {
     "Building tomorrow's society through robotics. Through humanoid-powered promotion at events and commercial spaces, we create the moments where people and robots meet.",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
   nav: {
-    solution: "Humanoid Promotion",
+    solution: "Service",
     vision: "Vision",
     contact: "Contact",
   },
@@ -134,7 +134,7 @@ const ja = {
     "ロボティクスで、あしたの社会を構築する。イベントや商業施設でのヒューマノイドプロモーションを通じて、人とロボットが出会う機会をつくります。",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
   nav: {
-    solution: "ロボットプロモーション",
+    solution: "サービス",
     vision: "ビジョン",
     contact: "お問い合わせ",
   },
