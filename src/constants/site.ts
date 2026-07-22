@@ -76,7 +76,7 @@ const en = {
   company: {
     title: "Company",
     rows: [
-      { label: "Company Name", value: "ASHITANO Robotics" },
+      { label: "Company Name", value: "ASHITANO Robotics, Inc." },
       { label: "Representative", value: "Yumiki Hara" },
       {
         label: "Address",
