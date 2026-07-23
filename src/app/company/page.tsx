@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import CompanyPage from "@/components/CompanyPage";
 import { getSite } from "@/constants/site";
 
-const en = getSite("en");
+const ja = getSite("ja");
 
 export const metadata: Metadata = {
-  title: `${en.company.title} | ${en.name}`,
-  description: en.description,
+  title: `${ja.company.title} | ${ja.name}`,
+  description: ja.description,
 };
 
 export default function Company() {
-  return <CompanyPage locale="en" />;
+  return <CompanyPage locale="ja" />;
 }

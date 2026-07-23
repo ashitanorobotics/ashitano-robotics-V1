@@ -9,12 +9,12 @@ const SCROLL_THRESHOLD = 48;
 export default function Header({ locale }: { locale: Locale }) {
   const site = getSite(locale);
   const pathname = usePathname() ?? "/";
-  const home = locale === "ja" ? "/ja" : "/";
+  const home = locale === "en" ? "/en" : "/";
   const [inverted, setInverted] = useState(false);
 
-  const basePath = pathname.replace(/^\/ja(?=\/|$)/, "") || "/";
-  const jaPath = basePath === "/" ? "/ja" : `/ja${basePath}`;
-  const enPath = basePath;
+  const basePath = pathname.replace(/^\/en(?=\/|$)/, "") || "/";
+  const jaPath = basePath;
+  const enPath = basePath === "/" ? "/en" : `/en${basePath}`;
 
   const isHome = basePath === "/";
 

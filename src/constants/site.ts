@@ -258,4 +258,4 @@ export function getSite(locale: Locale): SiteContent {
 }
 
 // Default dictionary (used by root metadata etc.)
-export const site = en;
+export const site = ja;

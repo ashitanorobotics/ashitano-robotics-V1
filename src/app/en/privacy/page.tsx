@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import PrivacyPage from "@/components/PrivacyPage";
 import { getSite } from "@/constants/site";
 
-const ja = getSite("ja");
+const en = getSite("en");
 
 export const metadata: Metadata = {
-  title: `${ja.privacy.title} | ${ja.name}`,
-  description: ja.description,
+  title: `${en.privacy.title} | ${en.name}`,
+  description: en.description,
 };
 
-export default function PrivacyJa() {
-  return <PrivacyPage locale="ja" />;
+export default function PrivacyEn() {
+  return <PrivacyPage locale="en" />;
 }

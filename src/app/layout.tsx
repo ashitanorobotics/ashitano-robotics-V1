@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ja"
       className={`${hostGrotesk.variable} ${montserrat.variable} ${notoSansJp.variable} h-full antialiased`}
     >
       <body className="min-h-full max-w-full overflow-x-clip bg-bg font-sans text-fg antialiased">

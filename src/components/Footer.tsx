@@ -2,7 +2,7 @@ import { getSite, type Locale } from "@/constants/site";
 
 export default function Footer({ locale }: { locale: Locale }) {
   const site = getSite(locale);
-  const prefix = locale === "ja" ? "/ja" : "";
+  const prefix = locale === "en" ? "/en" : "";
   const links = [
     { label: site.footer.company, href: `${prefix}/company` },
     { label: site.footer.privacy, href: `${prefix}/privacy` },
