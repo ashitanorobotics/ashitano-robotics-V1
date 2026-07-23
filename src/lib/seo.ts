@@ -45,9 +45,9 @@ function pageTitle(locale: Locale, page: PageKey): string {
     case "home":
       return site.seo.homeTitle;
     case "company":
-      return `${site.company.title} | ${site.nameEn}`;
+      return `${site.legalName} | ${site.company.title}`;
     case "privacy":
-      return `${site.privacy.title} | ${site.nameEn}`;
+      return `${site.privacy.title} | ${site.legalName}`;
   }
 }
 

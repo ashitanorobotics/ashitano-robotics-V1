@@ -28,6 +28,9 @@ export default function Footer({ locale }: { locale: Locale }) {
                 </span>
                 <span className="company-name">{site.nameEn}</span>
               </div>
+              {locale === "ja" ? (
+                <p className="mt-1 text-sm text-tertiary">{site.legalName}</p>
+              ) : null}
               <p className="mt-2 text-sm text-tertiary">{site.tagline}</p>
               <a
                 href={`mailto:${site.email}`}

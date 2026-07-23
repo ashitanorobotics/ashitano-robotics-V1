@@ -14,14 +14,12 @@ type JsonLdProps = {
 
 function organizationSchema(locale: Locale) {
   const site = getSite(locale);
-  const companyRow = site.company.rows.find((row) =>
-    locale === "ja" ? row.label === "社名" : row.label === "Company Name",
-  );
 
   return {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
-    name: companyRow?.value ?? site.nameEn,
+    name: site.legalName,
+    legalName: site.legalName,
     alternateName: [site.name, site.nameEn],
     url: SITE_URL,
     logo: absoluteUrl(LOGO_PATH),
@@ -55,7 +53,7 @@ function websiteSchema(locale: Locale) {
     "@type": "WebSite",
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
-    name: site.nameEn,
+    name: locale === "ja" ? site.legalName : site.nameEn,
     description: site.description,
     inLanguage: locale === "ja" ? "ja-JP" : "en-US",
     publisher: { "@id": `${SITE_URL}/#organization` },

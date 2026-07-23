@@ -1,6 +1,7 @@
 const en = {
   name: "ASHITANO Robotics",
   nameEn: "ASHITANO Robotics",
+  legalName: "ASHITANO Robotics, Inc.",
   productLine: "One Home, One Robot",
   email: "contact@ashitanorobotics.co.jp",
   tagline: "Building tomorrow's society through robotics",
@@ -145,6 +146,7 @@ const en = {
 const ja = {
   name: "あしたのロボティクス",
   nameEn: "ASHITANO Robotics",
+  legalName: "あしたのロボティクス株式会社",
   productLine: "One Home, One Robot",
   email: "contact@ashitanorobotics.co.jp",
   tagline: "ロボティクスで、あしたの社会を構築する",
@@ -235,12 +237,13 @@ const ja = {
     ],
   },
   seo: {
-    homeTitle: "あしたのロボティクス | ロボティクスで、あしたの社会を構築する",
+    homeTitle: "あしたのロボティクス株式会社 | ロボティクスで、あしたの社会を構築する",
     companyDescription:
       "あしたのロボティクス株式会社の会社概要。ヒューマノイドを活用したプロモーションの企画・制作・運営、ロボットの社会実装支援を行っています。",
     privacyDescription:
       "あしたのロボティクス株式会社のプライバシーポリシー。当ウェブサイトを通じて取得した個人情報の取り扱いについてご説明します。",
     keywords: [
+      "あしたのロボティクス株式会社",
       "あしたのロボティクス",
       "ASHITANO Robotics",
       "ヒューマノイド",
