@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import HomePage from "@/components/HomePage";
-import { getSite } from "@/constants/site";
+import JsonLd from "@/components/JsonLd";
+import { createPageMetadata } from "@/lib/seo";
 
-const ja = getSite("ja");
-
-export const metadata: Metadata = {
-  title: ja.name,
-  description: ja.description,
-};
+export const metadata: Metadata = createPageMetadata("ja", "home");
 
 export default function Home() {
-  return <HomePage locale="ja" />;
+  return (
+    <>
+      <JsonLd locale="ja" page="home" />
+      <HomePage locale="ja" />
+    </>
+  );
 }

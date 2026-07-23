@@ -14,12 +14,12 @@ export default function Solution({ locale }: { locale: Locale }) {
     >
       <div className="mx-auto w-full max-w-[1280px]">
         <Reveal>
-          <p
+          <h2
             id="solution-heading"
             className="max-w-[900px] whitespace-pre-line text-left text-[clamp(22px,3.2vw,40px)] font-normal leading-[1.45] tracking-[-0.02em] text-black"
           >
             {solution.statement}
-          </p>
+          </h2>
         </Reveal>
 
         <div className="capability-grid">

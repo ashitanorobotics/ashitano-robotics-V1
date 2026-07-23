@@ -91,6 +91,24 @@ const en = {
       { label: "Contact", value: "contact@ashitanorobotics.co.jp" },
     ],
   },
+  seo: {
+    homeTitle: "ASHITANO Robotics | Building Tomorrow's Society Through Robotics",
+    companyDescription:
+      "Company profile of ASHITANO Robotics, Inc. — planning, production, and operation of humanoid-powered promotion and robot implementation support.",
+    privacyDescription:
+      "Privacy policy for ASHITANO Robotics. Learn how we collect, use, and protect personal information submitted through this website.",
+    keywords: [
+      "ASHITANO Robotics",
+      "humanoid robot",
+      "robotics",
+      "robot promotion",
+      "event marketing",
+      "retail activation",
+      "robot implementation",
+      "One Home One Robot",
+      "Tokyo robotics",
+    ],
+  },
   privacy: {
     title: "Privacy Policy",
     intro:
@@ -214,6 +232,25 @@ const ja = {
           "ヒューマノイドを活用したプロモーションの企画・制作・運営、ロボットの社会実装支援",
       },
       { label: "連絡先", value: "contact@ashitanorobotics.co.jp" },
+    ],
+  },
+  seo: {
+    homeTitle: "あしたのロボティクス | ロボティクスで、あしたの社会を構築する",
+    companyDescription:
+      "あしたのロボティクス株式会社の会社概要。ヒューマノイドを活用したプロモーションの企画・制作・運営、ロボットの社会実装支援を行っています。",
+    privacyDescription:
+      "あしたのロボティクス株式会社のプライバシーポリシー。当ウェブサイトを通じて取得した個人情報の取り扱いについてご説明します。",
+    keywords: [
+      "あしたのロボティクス",
+      "ASHITANO Robotics",
+      "ヒューマノイド",
+      "ロボット",
+      "ロボティクス",
+      "プロモーション",
+      "イベント集客",
+      "店舗プロモーション",
+      "ロボット社会実装",
+      "One Home One Robot",
     ],
   },
   privacy: {

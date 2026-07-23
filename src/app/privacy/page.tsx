@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import PrivacyPage from "@/components/PrivacyPage";
-import { getSite } from "@/constants/site";
+import JsonLd from "@/components/JsonLd";
+import { createPageMetadata } from "@/lib/seo";
 
-const ja = getSite("ja");
-
-export const metadata: Metadata = {
-  title: `${ja.privacy.title} | ${ja.name}`,
-  description: ja.description,
-};
+export const metadata: Metadata = createPageMetadata("ja", "privacy");
 
 export default function Privacy() {
-  return <PrivacyPage locale="ja" />;
+  return (
+    <>
+      <JsonLd locale="ja" page="privacy" />
+      <PrivacyPage locale="ja" />
+    </>
+  );
 }

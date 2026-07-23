@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Host_Grotesk, Montserrat, Noto_Sans_JP } from "next/font/google";
-import { site } from "@/constants/site";
+import { createRootMetadata } from "@/lib/seo";
 import ScrollReset from "@/components/ScrollReset";
 import "./globals.css";
 
@@ -25,10 +25,7 @@ const notoSansJp = Noto_Sans_JP({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: site.name,
-  description: site.description,
-};
+export const metadata: Metadata = createRootMetadata();
 
 export default function RootLayout({
   children,
