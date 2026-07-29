@@ -6,7 +6,7 @@ const en = {
   email: "contact@ashitanorobotics.co.jp",
   tagline: "Building tomorrow's society through robotics",
   description:
-    "Building tomorrow's society through robotics. Through humanoid-powered promotion at events and commercial spaces, we create the moments where people and robots meet.",
+    "Building tomorrow's society through robotics. Through humanoid robots at events, warehouses, and logistics sites, we create the moments where people and robots meet.",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
   nav: {
     solution: "Service",
@@ -16,31 +16,37 @@ const en = {
   hero: {
     title: "Building Tomorrow's Society\nThrough Robotics",
     cta: "Contact Us",
-    sub: "We bring humanoids into the real world — creating encounters that make robots part of everyday life.",
+    sub: "We bring humanoids into the real world — from events and retail to warehouse and logistics floors.",
     alt: "A person and a humanoid robot standing side by side",
   },
   solution: {
     statement:
-      "We plan and deliver campaigns that use the presence of humanoid robots to attract, engage, and convert — at events, retail spaces, and beyond.",
+      "From streets to facilities to the places people work — we plan, deploy, and operate humanoids where they create real impact.",
     cardCta: "Contact Us",
     capabilities: [
       {
-        title: "Attract attention",
+        title: "Marketing & Promotion",
         description:
-          "An unfamiliar presence stops people in their tracks. Attention comes naturally.",
-        image: "/images/cap-attract-g1-v5.png",
+          "Humanoid presence that stops people in their tracks — and turns attention into action at events, retail, and commercial spaces.",
+        image: "/images/cap-marketing-g1-v1.png",
       },
       {
-        title: "Create experiences",
+        title: "Warehouse",
         description:
-          "Not just a display — we design moments people want to photograph and share.",
-        image: "/images/cap-experience-g1-v5.png",
+          "Humanoids that work alongside people in warehouses — supporting picking, sorting, and inventory tasks on the floor.",
+        image: "/images/cap-warehouse-g1-v1.png",
       },
       {
-        title: "Drive action",
+        title: "Logistics",
         description:
-          "QR codes, social posts, sign-ups: we turn attention into concrete next steps.",
-        image: "/images/cap-action-g1-v5.png",
+          "From loading docks to last-mile hubs — humanoids that keep goods moving through the supply chain.",
+        image: "/images/cap-logistics-g1-v1.png",
+      },
+      {
+        title: "After-hours monitoring",
+        description:
+          "When stores and facilities close, humanoids patrol and monitor — keeping sites secure through the night.",
+        image: "/images/cap-monitoring-g1-v1.png",
       },
     ],
   },
@@ -51,7 +57,7 @@ const en = {
   },
   contact: {
     title: "Let's build your next project,\nrobots included.",
-    body: "Events, retail, product launches — tell us what you have in mind,\nand we'll explore how humanoids can make it work.",
+    body: "Events, retail, warehouses, logistics — tell us what you have in mind,\nand we'll explore how humanoids can make it work.",
     cta: "Contact Us",
     submit: "Send",
     form: {
@@ -87,7 +93,7 @@ const en = {
       {
         label: "Business",
         value:
-          "Planning, production, and operation of humanoid-powered promotion; robot implementation support",
+          "Planning, production, and operation of humanoid-powered services; robot implementation support for marketing, warehouse, and logistics",
       },
       { label: "Contact", value: "contact@ashitanorobotics.co.jp" },
     ],
@@ -95,7 +101,7 @@ const en = {
   seo: {
     homeTitle: "ASHITANO Robotics | Building Tomorrow's Society Through Robotics",
     companyDescription:
-      "Company profile of ASHITANO Robotics, Inc. — planning, production, and operation of humanoid-powered promotion and robot implementation support.",
+      "Company profile of ASHITANO Robotics, Inc. — planning, production, and operation of humanoid-powered services for marketing, warehouse, and logistics.",
     privacyDescription:
       "Privacy policy for ASHITANO Robotics. Learn how we collect, use, and protect personal information submitted through this website.",
     keywords: [
@@ -105,6 +111,8 @@ const en = {
       "robot promotion",
       "event marketing",
       "retail activation",
+      "warehouse automation",
+      "logistics robotics",
       "robot implementation",
       "One Home One Robot",
       "Tokyo robotics",
@@ -151,7 +159,7 @@ const ja = {
   email: "contact@ashitanorobotics.co.jp",
   tagline: "ロボティクスで、あしたの社会を構築する",
   description:
-    "ロボティクスで、あしたの社会を構築する。イベントや商業施設でのヒューマノイドプロモーションを通じて、人とロボットが出会う機会をつくります。",
+    "ロボティクスで、あしたの社会を構築する。イベントや商業施設、倉庫・物流の現場でヒューマノイドを活用し、人とロボットが出会う機会をつくります。",
   copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
   nav: {
     solution: "サービス",
@@ -161,31 +169,37 @@ const ja = {
   hero: {
     title: "ロボティクスで、\nあしたの社会を構築する",
     cta: "お問い合わせ",
-    sub: "ヒューマノイドを街や店舗へ。\n人が立ち止まる、出会いの場をつくります。",
+    sub: "イベントや店舗から、倉庫・物流の現場まで。\nヒューマノイドを社会に届けます。",
     alt: "人とヒューマノイドロボットが並び、未来を見据える様子",
   },
   solution: {
     statement:
-      "イベントや商業施設などで、\nヒューマノイドの存在感を活かした\n集客・告知施策を企画、実施します。",
+      "街も、施設も、働く現場も。ヒューマノイドが活きる場所を、企画・導入・運用します。",
     cardCta: "お問い合わせ",
     capabilities: [
       {
-        title: "人を惹きつける",
+        title: "マーケティング・プロモーション",
         description:
-          "見慣れない存在だからこそ、\n人が足を止め、自然な注目が生まれます。",
-        image: "/images/cap-attract-g1-v5.png",
+          "イベントや商業施設で、ヒューマノイドの存在感を活かした集客・体験・コンバージョン施策を企画・実施します。",
+        image: "/images/cap-marketing-g1-v1.png",
       },
       {
-        title: "体験をつくる",
+        title: "倉庫",
         description:
-          "ただ展示するのではなく、\n撮影や交流が生まれる場を設計します。",
-        image: "/images/cap-experience-g1-v5.png",
+          "ピッキングや仕分け、在庫管理など、倉庫フロアでの作業をヒューマノイドがサポートします。",
+        image: "/images/cap-warehouse-g1-v1.png",
       },
       {
-        title: "次の行動につなげる",
+        title: "物流",
         description:
-          "QRコードやSNS、イベントへの参加など、\n注目を具体的な行動へつなげます。",
-        image: "/images/cap-action-g1-v5.png",
+          "積み込みからラストワンマイルまで、サプライチェーンを止めない物流現場を支援します。",
+        image: "/images/cap-logistics-g1-v1.png",
+      },
+      {
+        title: "営業終了後の監視",
+        description:
+          "店舗や施設の営業終了後も、ヒューマノイドが巡回・監視し、夜間の安全を支えます。",
+        image: "/images/cap-monitoring-g1-v1.png",
       },
     ],
   },
@@ -196,7 +210,7 @@ const ja = {
   },
   contact: {
     title: "ロボットを活用した企画を、\n一緒につくりませんか。",
-    body: "イベント、店舗、プロモーションなど、\nヒューマノイドの活用についてご相談ください。",
+    body: "イベント、店舗、倉庫、物流など、\nヒューマノイドの活用についてご相談ください。",
     cta: "お問い合わせ",
     submit: "送信する",
     form: {
@@ -231,7 +245,7 @@ const ja = {
       {
         label: "事業内容",
         value:
-          "ヒューマノイドを活用したプロモーションの企画・制作・運営、ロボットの社会実装支援",
+          "ヒューマノイドを活用したマーケティング・倉庫・物流サービスの企画・制作・運営、ロボットの社会実装支援",
       },
       { label: "連絡先", value: "contact@ashitanorobotics.co.jp" },
     ],
@@ -239,7 +253,7 @@ const ja = {
   seo: {
     homeTitle: "あしたのロボティクス株式会社 | ロボティクスで、あしたの社会を構築する",
     companyDescription:
-      "あしたのロボティクス株式会社の会社概要。ヒューマノイドを活用したプロモーションの企画・制作・運営、ロボットの社会実装支援を行っています。",
+      "あしたのロボティクス株式会社の会社概要。ヒューマノイドを活用したマーケティング・倉庫・物流サービスの企画・制作・運営、ロボットの社会実装支援を行っています。",
     privacyDescription:
       "あしたのロボティクス株式会社のプライバシーポリシー。当ウェブサイトを通じて取得した個人情報の取り扱いについてご説明します。",
     keywords: [
@@ -252,6 +266,8 @@ const ja = {
       "プロモーション",
       "イベント集客",
       "店舗プロモーション",
+      "倉庫自動化",
+      "物流ロボット",
       "ロボット社会実装",
       "One Home One Robot",
     ],
