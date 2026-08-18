@@ -412,6 +412,13 @@ body {
 
 #request-demo-section .section-heading-lg {
   color: #fff;
+  white-space: normal;
+}
+
+@media (min-width: 768px) {
+  #request-demo-section .section-heading-lg {
+    white-space: normal;
+  }
 }
 
 @media (min-width: 768px) {

@@ -47,11 +47,11 @@ export default function ContactCta({ locale }: { locale: Locale }) {
         <div className="mx-auto max-w-[640px] text-center">
           <h2
             id="contact-heading"
-            className="section-heading-lg mx-auto whitespace-pre-line"
+            className="section-heading-lg mx-auto"
           >
             {site.contact.title}
           </h2>
-          <p className="mt-6 whitespace-pre-line text-[clamp(16px,1.8vw,22px)] leading-relaxed text-white/90">
+          <p className="mt-6 text-[clamp(16px,1.8vw,22px)] leading-relaxed text-white/90">
             {site.contact.body}
           </p>
         </div>

@@ -44,9 +44,6 @@ export default function Vision({ locale }: { locale: Locale }) {
             <p className="mx-auto mt-8 max-w-[720px] whitespace-pre-line text-center text-[clamp(15px,1.6vw,18px)] leading-[2] text-white/85">
               {vision.body}
             </p>
-            <p className="font-display mt-12 text-center text-[clamp(20px,2.6vw,30px)] font-bold tracking-[-0.02em] text-white">
-              {vision.closing}
-            </p>
           </div>
         </MediaFrame>
       </Reveal>

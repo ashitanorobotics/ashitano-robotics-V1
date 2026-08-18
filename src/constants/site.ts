@@ -1,63 +1,62 @@
 const en = {
-  name: "ASHITANO Robotics",
-  nameEn: "ASHITANO Robotics",
+  name: "Ashitano Robotics",
+  nameEn: "Ashitano Robotics",
   legalName: "ASHITANO Robotics, Inc.",
-  productLine: "One Home, One Robot",
+  productLine: "Enriching tomorrow through technology",
   email: "contact@ashitanorobotics.co.jp",
-  tagline: "Building tomorrow's society through robotics",
+  tagline: "Enriching tomorrow through technology.",
   description:
-    "Building tomorrow's society through robotics. Through humanoid robots at events, warehouses, and logistics sites, we create the moments where people and robots meet.",
-  copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
+    "Enriching tomorrow through technology. Through physical AI at events, warehouses, and logistics sites, we create the moments where people and technology meet.",
+  copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
     solution: "Service",
     vision: "Vision",
     contact: "Contact",
   },
   hero: {
-    title: "Building Tomorrow's Society\nThrough Robotics",
+    title: "Enriching Tomorrow\nThrough Technology",
     cta: "Contact Us",
-    sub: "We bring humanoids into the real world — from events and retail to warehouse and logistics floors.",
-    alt: "A person and a humanoid robot standing side by side",
+    sub: "We bring physical AI into the real world — from events and retail to warehouse and logistics floors.",
+    alt: "Physical AI operating in a real-world environment",
   },
   solution: {
     statement:
-      "From streets to facilities to the places people work — we plan, deploy, and operate humanoids where they create real impact.",
+      "From streets to facilities to the places people work — we plan, deploy, and operate physical AI where it creates real impact.",
     cardCta: "Contact Us",
     capabilities: [
       {
         title: "Marketing & Promotion",
         description:
-          "Humanoid presence that stops people in their tracks — and turns attention into action at events, retail, and commercial spaces.",
+          "Physical AI that stops people in their tracks — and turns attention into action at events, retail, and commercial spaces.",
         image: "/images/cap-marketing-g1-v1.png",
       },
       {
         title: "Warehouse",
         description:
-          "Humanoids that work alongside people in warehouses — supporting picking, sorting, and inventory tasks on the floor.",
+          "Physical AI that works alongside people in warehouses — supporting picking, sorting, and inventory tasks on the floor.",
         image: "/images/cap-warehouse-g1-v1.png",
       },
       {
         title: "Logistics",
         description:
-          "From loading docks to last-mile hubs — humanoids that keep goods moving through the supply chain.",
+          "From loading docks to last-mile hubs — physical AI that keeps goods moving through the supply chain.",
         image: "/images/cap-logistics-g1-v1.png",
       },
       {
         title: "After-hours monitoring",
         description:
-          "When stores and facilities close, humanoids patrol and monitor — keeping sites secure through the night.",
+          "When stores and facilities close, physical AI patrols and monitors — keeping sites secure through the night.",
         image: "/images/cap-monitoring-g1-v1.png",
       },
     ],
   },
   vision: {
-    title: "From streets to stores.\nFrom stores to homes.",
-    body: "First, we grow the places where people and robots meet.\nThe insights we gain expand where robots work — and where they live.\n\nWe don't just talk about a distant future.\nWe build the everyday of robots, one real-world site at a time.",
-    closing: "One Home, One Robot.",
+    title: "Building from real sites.",
+    body: "Physical AI creates new value wherever people gather and wherever work happens — from events and retail to warehouse floors, logistics hubs, and after-hours monitoring. The places it can contribute keep expanding.\n\nWe partner with clients from planning through deployment and day-to-day operations. What we learn at one site informs the next, steadily growing the environments where technology works naturally alongside people.\n\nWe don't talk about a distant future. We start at real sites, and build a world where physical AI and people work together as a matter of course. That is our vision.",
   },
   contact: {
-    title: "Let's build your next project,\nrobots included.",
-    body: "Events, retail, warehouses, logistics — tell us what you have in mind,\nand we'll explore how humanoids can make it work.",
+    title: "Get in touch.",
+    body: "Questions about physical AI — deployment, operations, events, retail, warehouses, or logistics. We'd love to hear from you.",
     cta: "Contact Us",
     submit: "Send",
     form: {
@@ -93,20 +92,20 @@ const en = {
       {
         label: "Business",
         value:
-          "Planning, production, and operation of humanoid-powered services; robot implementation support for marketing, warehouse, and logistics",
+          "Planning, production, and operation of physical AI services; robot implementation support for marketing, warehouse, and logistics",
       },
       { label: "Contact", value: "contact@ashitanorobotics.co.jp" },
     ],
   },
   seo: {
-    homeTitle: "ASHITANO Robotics | Building Tomorrow's Society Through Robotics",
+    homeTitle: "Ashitano Robotics | Enriching Tomorrow Through Technology",
     companyDescription:
-      "Company profile of ASHITANO Robotics, Inc. — planning, production, and operation of humanoid-powered services for marketing, warehouse, and logistics.",
+      "Company profile of Ashitano Robotics — planning, production, and operation of physical AI services for marketing, warehouse, and logistics.",
     privacyDescription:
-      "Privacy policy for ASHITANO Robotics. Learn how we collect, use, and protect personal information submitted through this website.",
+      "Privacy policy for Ashitano Robotics. Learn how we collect, use, and protect personal information submitted through this website.",
     keywords: [
-      "ASHITANO Robotics",
-      "humanoid robot",
+      "Ashitano Robotics",
+      "physical AI",
       "robotics",
       "robot promotion",
       "event marketing",
@@ -114,14 +113,13 @@ const en = {
       "warehouse automation",
       "logistics robotics",
       "robot implementation",
-      "One Home One Robot",
       "Tokyo robotics",
     ],
   },
   privacy: {
     title: "Privacy Policy",
     intro:
-      "ASHITANO Robotics (\u201cwe\u201d) respects your privacy. This policy explains how we handle personal information received through this website and our services.",
+      "Ashitano Robotics (\u201cwe\u201d) respects your privacy. This policy explains how we handle personal information received through this website and our services.",
     sections: [
       {
         heading: "1. Information We Collect",
@@ -153,40 +151,40 @@ const en = {
 
 const ja = {
   name: "あしたのロボティクス",
-  nameEn: "ASHITANO Robotics",
+  nameEn: "Ashitano Robotics",
   legalName: "あしたのロボティクス株式会社",
-  productLine: "One Home, One Robot",
+  productLine: "テクノロジーで、あしたをもっと豊かに。",
   email: "contact@ashitanorobotics.co.jp",
-  tagline: "ロボティクスで、あしたの社会を構築する",
+  tagline: "テクノロジーで、あしたをもっと豊かに。",
   description:
-    "ロボティクスで、あしたの社会を構築する。イベントや商業施設、倉庫・物流の現場でヒューマノイドを活用し、人とロボットが出会う機会をつくります。",
-  copyright: "© 2026 ASHITANO Robotics. All Rights Reserved.",
+    "テクノロジーで、あしたをもっと豊かに。イベントや商業施設、倉庫・物流の現場でフィジカルAIを活用し、人とテクノロジーが出会う機会をつくります。",
+  copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
     solution: "サービス",
     vision: "ビジョン",
     contact: "お問い合わせ",
   },
   hero: {
-    title: "ロボティクスで、\nあしたの社会を構築する",
+    title: "テクノロジーで、\nあしたをもっと豊かに。",
     cta: "お問い合わせ",
-    sub: "イベントや店舗から、倉庫・物流の現場まで。\nヒューマノイドを社会に届けます。",
-    alt: "人とヒューマノイドロボットが並び、未来を見据える様子",
+    sub: "イベントや店舗から、倉庫・物流の現場まで。フィジカルAIを社会に届けます。",
+    alt: "現場で活動するフィジカルAI",
   },
   solution: {
     statement:
-      "街も、施設も、働く現場も。ヒューマノイドが活きる場所を、企画・導入・運用します。",
+      "街も、施設も、働く現場も。フィジカルAIが活きる場所を、企画・導入・運用します。",
     cardCta: "お問い合わせ",
     capabilities: [
       {
         title: "マーケティング・プロモーション",
         description:
-          "イベントや商業施設で、ヒューマノイドの存在感を活かした集客・体験・コンバージョン施策を企画・実施します。",
+          "イベントや商業施設で、フィジカルAIの存在感を活かした集客・体験・コンバージョン施策を企画・実施します。",
         image: "/images/cap-marketing-g1-v1.png",
       },
       {
         title: "倉庫",
         description:
-          "ピッキングや仕分け、在庫管理など、倉庫フロアでの作業をヒューマノイドがサポートします。",
+          "ピッキングや仕分け、在庫管理など、倉庫フロアでの作業をフィジカルAIがサポートします。",
         image: "/images/cap-warehouse-g1-v1.png",
       },
       {
@@ -198,19 +196,18 @@ const ja = {
       {
         title: "営業終了後の監視",
         description:
-          "店舗や施設の営業終了後も、ヒューマノイドが巡回・監視し、夜間の安全を支えます。",
+          "店舗や施設の営業終了後も、フィジカルAIが巡回・監視し、夜間の安全を支えます。",
         image: "/images/cap-monitoring-g1-v1.png",
       },
     ],
   },
   vision: {
-    title: "街から、店舗へ。\n店舗から、家庭へ。",
-    body: "まずは、人とロボットが出会う場所を増やす。\nそこで得た知見を蓄積し、\nロボットが働く場所、暮らす場所を広げていく。\n\n遠い未来を語るだけではなく、\n目の前の現場から、\nロボットの当たり前をつくります。",
-    closing: "One Home, One Robot.",
+    title: "現場から、変えていく。",
+    body: "フィジカルAIは、人が集まる場所から、人が働く現場まで、新しい価値を生み出す存在です。イベントや商業施設での集客・体験、倉庫や物流での作業支援、営業終了後の監視——活用の幅は広がり続けています。\n\n私たちは、こうした現場で企画・導入・運用まで一貫して伴走します。一つの現場で得た知見を次の現場へつなぎ、テクノロジーが自然に活きる場を、着実に増やしていく。\n\n遠い未来を語るだけではなく、目の前の現場から、フィジカルAIと人が共に働く当たり前をつくる。それが私たちのビジョンです。",
   },
   contact: {
-    title: "ロボットを活用した企画を、\n一緒につくりませんか。",
-    body: "イベント、店舗、倉庫、物流など、\nヒューマノイドの活用についてご相談ください。",
+    title: "お気軽にご相談ください。",
+    body: "フィジカルAIの導入・運用、イベント、店舗、倉庫、物流など、お問い合わせをお待ちしています。",
     cta: "お問い合わせ",
     submit: "送信する",
     form: {
@@ -245,22 +242,22 @@ const ja = {
       {
         label: "事業内容",
         value:
-          "ヒューマノイドを活用したマーケティング・倉庫・物流サービスの企画・制作・運営、ロボットの社会実装支援",
+          "フィジカルAIを活用したマーケティング・倉庫・物流サービスの企画・制作・運営、ロボットの社会実装支援",
       },
       { label: "連絡先", value: "contact@ashitanorobotics.co.jp" },
     ],
   },
   seo: {
-    homeTitle: "あしたのロボティクス株式会社 | ロボティクスで、あしたの社会を構築する",
+    homeTitle: "あしたのロボティクス株式会社 | テクノロジーで、あしたをもっと豊かに。",
     companyDescription:
-      "あしたのロボティクス株式会社の会社概要。ヒューマノイドを活用したマーケティング・倉庫・物流サービスの企画・制作・運営、ロボットの社会実装支援を行っています。",
+      "あしたのロボティクス株式会社の会社概要。フィジカルAIを活用したマーケティング・倉庫・物流サービスの企画・制作・運営、ロボットの社会実装支援を行っています。",
     privacyDescription:
       "あしたのロボティクス株式会社のプライバシーポリシー。当ウェブサイトを通じて取得した個人情報の取り扱いについてご説明します。",
     keywords: [
       "あしたのロボティクス株式会社",
       "あしたのロボティクス",
-      "ASHITANO Robotics",
-      "ヒューマノイド",
+      "Ashitano Robotics",
+      "フィジカルAI",
       "ロボット",
       "ロボティクス",
       "プロモーション",
@@ -269,7 +266,6 @@ const ja = {
       "倉庫自動化",
       "物流ロボット",
       "ロボット社会実装",
-      "One Home One Robot",
     ],
   },
   privacy: {
