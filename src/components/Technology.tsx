@@ -10,6 +10,7 @@ export default function Technology({ locale }: { locale: Locale }) {
       <MediaSlot
         className="aspect-[4/5] w-full lg:aspect-[2/1]"
         videoSrc="/videos/technology.mp4"
+        coverSrc="/images/technology-poster.jpg"
         alt=""
       >
         <div
@@ -43,12 +44,12 @@ export default function Technology({ locale }: { locale: Locale }) {
         <div className="flex w-full flex-col gap-2 lg:contents">
           <MediaSlot
             className="aspect-video w-full"
-            src="/images/go2-simulation.png"
+            src="/images/go2-simulation.jpg"
             alt=""
           />
           <MediaSlot
             className="aspect-video w-full"
-            src="/images/point-cloud.png"
+            src="/images/point-cloud.jpg"
             alt=""
           />
         </div>

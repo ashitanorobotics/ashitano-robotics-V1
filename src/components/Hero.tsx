@@ -197,6 +197,7 @@ export default function Hero({ locale }: { locale: Locale }) {
               coverSrc="/images/hero-site.jpg"
               alt={site.hero.alt}
               objectPosition="center center"
+              eager
             />
           </div>
           <p className="heading-2 mt-6 lg:mt-8">{mission.body}</p>

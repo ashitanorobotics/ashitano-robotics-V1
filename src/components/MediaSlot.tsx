@@ -43,6 +43,7 @@ export default function MediaSlot({
   objectFit = "cover",
   objectPosition = "center",
   surface = "black",
+  eager = false,
   children,
 }: {
   className?: string;
@@ -55,11 +56,17 @@ export default function MediaSlot({
   objectFit?: "cover" | "contain";
   objectPosition?: string;
   surface?: "black" | "accent";
+  /** Load immediately (hero). Other videos wait until near viewport. */
+  eager?: boolean;
   children?: ReactNode;
 }) {
+  const rootRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
-  const [activeSrc, setActiveSrc] = useState(videoSrc ?? "");
+  const [shouldLoad, setShouldLoad] = useState(eager);
+  const [activeSrc, setActiveSrc] = useState(() =>
+    videoSrc ? pickSource(videoSrc, mobileVideoSrc) : "",
+  );
   const fitClass = objectFit === "contain" ? "object-contain" : "object-cover";
   const surfaceClass = surface === "accent" ? "bg-accent" : "bg-black";
   const mediaStyle = { objectPosition };
@@ -70,15 +77,34 @@ export default function MediaSlot({
     setActiveSrc(pickSource(videoSrc, mobileVideoSrc));
   }, [videoSrc, mobileVideoSrc]);
 
+  // Defer attaching heavy video sources until near the viewport.
+  useEffect(() => {
+    if (!videoSrc || eager || shouldLoad) return;
+    const root = rootRef.current;
+    if (!root) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setShouldLoad(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "400px 0px", threshold: 0.01 },
+    );
+    io.observe(root);
+    return () => io.disconnect();
+  }, [videoSrc, eager, shouldLoad]);
+
   useEffect(() => {
     const video = videoRef.current;
-    if (!video || !activeSrc) return;
+    if (!video || !activeSrc || !shouldLoad) return;
 
     unlockAutoplay(video);
     setPlaying(false);
 
     const syncPlaying = () => {
-      const ok = !video.paused && !video.ended && video.readyState >= 2;
+      const ok = !video.paused && !video.ended && video.currentTime > 0.05;
       setPlaying(ok);
     };
 
@@ -116,6 +142,7 @@ export default function MediaSlot({
 
     const onVisibility = () => {
       if (document.visibilityState === "visible") tryPlay();
+      else video.pause();
     };
     document.addEventListener("visibilitychange", onVisibility);
     window.addEventListener(INTRO_DONE_EVENT, tryPlay);
@@ -135,25 +162,26 @@ export default function MediaSlot({
 
     const io = new IntersectionObserver(
       (entries) => {
-        if (
-          entries.some(
-            (entry) => entry.isIntersecting && entry.intersectionRatio > 0,
-          )
-        ) {
-          tryPlay();
+        const visible = entries.some(
+          (entry) => entry.isIntersecting && entry.intersectionRatio > 0,
+        );
+        if (visible) tryPlay();
+        else {
+          video.pause();
+          setPlaying(false);
         }
       },
-      { threshold: [0, 0.1, 0.25, 0.5] },
+      { threshold: [0, 0.15, 0.35] },
     );
     io.observe(video);
 
     const started = Date.now();
     const timer = window.setInterval(() => {
       tryPlay();
-      if (!video.paused || Date.now() - started > 15000) {
+      if (!video.paused || Date.now() - started > 12000) {
         window.clearInterval(timer);
       }
-    }, 250);
+    }, 400);
 
     return () => {
       for (const event of mediaEvents) {
@@ -176,10 +204,11 @@ export default function MediaSlot({
       io.disconnect();
       window.clearInterval(timer);
     };
-  }, [activeSrc]);
+  }, [activeSrc, shouldLoad]);
 
   return (
     <div
+      ref={rootRef}
       className={`media-slot relative overflow-hidden rounded-xl ${surfaceClass} ${className}${playing ? " is-playing" : ""}`}
       onPointerDown={() => {
         const video = videoRef.current;
@@ -190,12 +219,12 @@ export default function MediaSlot({
         <>
           <video
             ref={videoRef}
-            key={activeSrc}
+            key={shouldLoad ? activeSrc : "deferred"}
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
+            preload={eager ? "metadata" : "none"}
             controls={false}
             disablePictureInPicture
             disableRemotePlayback
@@ -203,7 +232,9 @@ export default function MediaSlot({
             className={`media-slot-video absolute inset-0 h-full w-full ${fitClass}${showCover ? " media-slot-video-pending" : ""}`}
             style={mediaStyle}
           >
-            <source src={activeSrc} type="video/mp4" />
+            {shouldLoad && activeSrc ? (
+              <source src={activeSrc} type="video/mp4" />
+            ) : null}
           </video>
           {coverSrc ? (
             <img
@@ -220,6 +251,8 @@ export default function MediaSlot({
         <img
           src={src}
           alt={alt}
+          loading={eager ? "eager" : "lazy"}
+          decoding="async"
           className={`absolute inset-0 h-full w-full ${fitClass}`}
           style={mediaStyle}
         />
