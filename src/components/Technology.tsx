@@ -8,7 +8,7 @@ export default function Technology({ locale }: { locale: Locale }) {
   return (
     <section id="technology" className="px-4 pb-16 lg:px-6 lg:pb-24">
       <MediaSlot
-        className="min-h-[52svh] w-full lg:min-h-0 lg:aspect-[2/1]"
+        className="aspect-video w-full lg:aspect-[2/1]"
         videoSrc="/videos/technology.mp4"
         alt=""
       >
