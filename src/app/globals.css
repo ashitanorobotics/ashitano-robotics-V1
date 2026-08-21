@@ -455,7 +455,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent);
+  background: var(--bg);
   will-change: transform;
   transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -469,7 +469,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  color: #fff;
+  color: var(--fg);
   opacity: 0;
   transform: scale(0.5);
   animation: intro-pop 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
@@ -479,7 +479,6 @@ body {
   height: clamp(1.5rem, 4vw, 2rem);
   width: clamp(1.5rem, 4vw, 2rem);
   object-fit: contain;
-  filter: invert(1);
 }
 
 .intro-brand span {

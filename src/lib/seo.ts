@@ -5,8 +5,8 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
   "https://ashitanorobotics.co.jp";
 
-export const OG_IMAGE_PATH = "/images/hero-site.jpg";
 export const LOGO_PATH = "/images/logo-mark.png";
+export const OG_IMAGE_PATH = LOGO_PATH;
 
 export type PageKey = "home" | "company" | "privacy" | "contact";
 
@@ -100,14 +100,14 @@ export function createPageMetadata(
       images: [
         {
           url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: site.hero.alt,
+          width: 970,
+          height: 836,
+          alt: site.nameEn,
         },
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
       title,
       description,
       images: [ogImage],
@@ -147,14 +147,14 @@ export function createRootMetadata(): Metadata {
       images: [
         {
           url: absoluteUrl(OG_IMAGE_PATH),
-          width: 1200,
-          height: 630,
-          alt: site.hero.alt,
+          width: 970,
+          height: 836,
+          alt: site.nameEn,
         },
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: "summary",
     },
   };
 }
