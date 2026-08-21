@@ -192,7 +192,7 @@ export default function Hero({ locale }: { locale: Locale }) {
           )}
           <div ref={mediaRef} className="mt-6 lg:mt-8">
             <MediaSlot
-              className="min-h-[52svh] w-full lg:min-h-0 lg:aspect-[2/1]"
+              className="aspect-video w-full lg:aspect-[2/1]"
               videoSrc="/videos/hero.mp4"
               alt={site.hero.alt}
               objectPosition="center center"
