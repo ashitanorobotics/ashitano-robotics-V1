@@ -6,8 +6,8 @@ export const SITE_URL =
   "https://ashitanorobotics.co.jp";
 
 export const LOGO_PATH = "/images/logo-mark.png";
-/** Query bumps LINE/SNS caches when the share image URL must change. */
-export const OG_IMAGE_PATH = `${LOGO_PATH}?v=2`;
+/** Dedicated share image (new path busts LINE/SNS caches). */
+export const OG_IMAGE_PATH = "/images/og.jpg";
 
 export type PageKey = "home" | "company" | "privacy" | "contact";
 
@@ -101,14 +101,14 @@ export function createPageMetadata(
       images: [
         {
           url: ogImage,
-          width: 970,
-          height: 836,
+          width: 1200,
+          height: 630,
           alt: site.nameEn,
         },
       ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
       images: [ogImage],
@@ -148,14 +148,14 @@ export function createRootMetadata(): Metadata {
       images: [
         {
           url: absoluteUrl(OG_IMAGE_PATH),
-          width: 970,
-          height: 836,
+          width: 1200,
+          height: 630,
           alt: site.nameEn,
         },
       ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
     },
   };
 }
