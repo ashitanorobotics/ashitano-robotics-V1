@@ -7,7 +7,7 @@ export const SITE_URL =
 
 export const LOGO_PATH = "/images/logo-mark.png";
 /** Dedicated share image (new path busts LINE/SNS caches). */
-export const OG_IMAGE_PATH = "/images/og-v2.jpg";
+export const OG_IMAGE_PATH = "/images/og-v3.jpg";
 
 export type PageKey = "home" | "company" | "privacy" | "contact";
 
