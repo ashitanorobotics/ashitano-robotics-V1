@@ -465,6 +465,35 @@ body {
   pointer-events: none;
 }
 
+/* Hide Safari/iOS native play chrome on muted autoplay videos */
+.media-slot-video {
+  -webkit-appearance: none;
+}
+
+.media-slot-video::-webkit-media-controls {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  -webkit-appearance: none;
+}
+
+.media-slot-video::-webkit-media-controls-enclosure,
+.media-slot-video::-webkit-media-controls-overlay-enclosure {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.media-slot-video::-webkit-media-controls-start-playback-button,
+.media-slot-video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  -webkit-appearance: none;
+  width: 0 !important;
+  height: 0 !important;
+}
+
 .intro-brand {
   display: inline-flex;
   align-items: center;
