@@ -9,7 +9,6 @@ const en = {
   copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
     services: "Services",
-    technology: "Physical AI",
     faqs: "FAQ",
     company: "Company",
     contact: "Contact",
@@ -271,7 +270,6 @@ const ja = {
   copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
     services: "事業内容",
-    technology: "フィジカルAIの特徴",
     faqs: "FAQ",
     company: "会社概要",
     contact: "お問い合わせ",
