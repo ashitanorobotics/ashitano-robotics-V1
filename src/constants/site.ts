@@ -9,6 +9,7 @@ const en = {
   copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
     services: "Services",
+    useCases: "Industries",
     faqs: "FAQ",
     company: "Company",
     contact: "Contact",
@@ -270,6 +271,7 @@ const ja = {
   copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
     services: "事業内容",
+    useCases: "産業領域",
     faqs: "FAQ",
     company: "会社概要",
     contact: "お問い合わせ",
