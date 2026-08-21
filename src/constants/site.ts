@@ -267,7 +267,7 @@ const ja = {
   email: "contact@ashitanorobotics.co.jp",
   tagline: "テクノロジーで、あしたをもっと豊かに。",
   description:
-    "テクノロジーで、あしたをもっと豊かに。ヒューマノイド・四足歩行・アームなど、フィジカルAIの現場導入から運用設計まで支援します。",
+    "テクノロジーで、あしたをもっと豊かに。",
   copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
     services: "事業内容",
