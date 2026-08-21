@@ -194,7 +194,6 @@ export default function Hero({ locale }: { locale: Locale }) {
             <MediaSlot
               className="min-h-[52svh] w-full lg:min-h-0 lg:aspect-[2/1]"
               videoSrc="/videos/hero.mp4"
-              poster="/images/hero-site.jpg"
               alt={site.hero.alt}
               objectPosition="center center"
             />

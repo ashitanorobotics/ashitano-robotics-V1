@@ -6,7 +6,8 @@ export const SITE_URL =
   "https://ashitanorobotics.co.jp";
 
 export const LOGO_PATH = "/images/logo-mark.png";
-export const OG_IMAGE_PATH = LOGO_PATH;
+/** Query bumps LINE/SNS caches when the share image URL must change. */
+export const OG_IMAGE_PATH = `${LOGO_PATH}?v=2`;
 
 export type PageKey = "home" | "company" | "privacy" | "contact";
 
