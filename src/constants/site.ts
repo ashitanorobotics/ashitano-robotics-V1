@@ -2,61 +2,165 @@ const en = {
   name: "Ashitano Robotics",
   nameEn: "Ashitano Robotics",
   legalName: "ASHITANO Robotics, Inc.",
-  productLine: "Enriching tomorrow through technology",
   email: "contact@ashitanorobotics.co.jp",
   tagline: "Enriching tomorrow through technology.",
   description:
-    "Enriching tomorrow through technology. Through physical AI at events, warehouses, and logistics sites, we create the moments where people and technology meet.",
+    "Enriching tomorrow through technology. We deploy physical AI — humanoids, quadrupeds, and robot arms — at industrial sites, from PoC through operations design.",
   copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
-    solution: "Service",
-    vision: "Vision",
+    services: "Services",
+    technology: "Physical AI",
+    faqs: "FAQ",
+    company: "Company",
     contact: "Contact",
   },
   hero: {
     title: "Enriching Tomorrow\nThrough Technology",
-    cta: "Contact Us",
-    sub: "We bring physical AI into the real world — from events and retail to warehouse and logistics floors.",
-    alt: "Physical AI operating in a real-world environment",
+    alt: "Physical AI on site",
   },
-  solution: {
-    statement:
-      "From streets to facilities to the places people work — we plan, deploy, and operate physical AI where it creates real impact.",
-    cardCta: "Contact Us",
-    capabilities: [
+  mission: {
+    body: "Labor shortages, aging populations, and other social challenges will only grow more complex. We are transforming robots into partners that work alongside people, support daily life, and create new value. By implementing robotics in society, we build a tomorrow where people can focus on more creative work.",
+  },
+  news: {
+    items: [
       {
-        title: "Marketing & Promotion",
-        description:
-          "Physical AI that stops people in their tracks — and turns attention into action at events, retail, and commercial spaces.",
-        image: "/images/cap-marketing-g1-v1.png",
-      },
-      {
-        title: "Warehouse",
-        description:
-          "Physical AI that works alongside people in warehouses — supporting picking, sorting, and inventory tasks on the floor.",
-        image: "/images/cap-warehouse-g1-v1.png",
-      },
-      {
-        title: "Logistics",
-        description:
-          "From loading docks to last-mile hubs — physical AI that keeps goods moving through the supply chain.",
-        image: "/images/cap-logistics-g1-v1.png",
-      },
-      {
-        title: "After-hours monitoring",
-        description:
-          "When stores and facilities close, physical AI patrols and monitors — keeping sites secure through the night.",
-        image: "/images/cap-monitoring-g1-v1.png",
+        date: "2026.08.21",
+        datetime: "2026-08-21",
+        title: "Website renewed.",
       },
     ],
   },
-  vision: {
-    title: "Building from real sites.",
-    body: "Physical AI creates new value wherever people gather and wherever work happens — from events and retail to warehouse floors, logistics hubs, and after-hours monitoring. The places it can contribute keep expanding.\n\nWe partner with clients from planning through deployment and day-to-day operations. What we learn at one site informs the next, steadily growing the environments where technology works naturally alongside people.\n\nWe don't talk about a distant future. We start at real sites, and build a world where physical AI and people work together as a matter of course. That is our vision.",
+  business: {
+    stickyWords: ["Physical AI as", "a workforce", "on the floor."],
+    service:
+      "Software development, on-site integration, deployment support, and operations design using physical AI",
+    serviceDetails: [
+      "From hardware procurement and on-site setup through operations design, verification, and full rollout, we propose a path matched to your tasks and how the site runs.",
+      "Full deployment includes ongoing software development and on-site operations support.",
+      "We do not sell robots at retail.",
+    ],
   },
+  useCases: {
+    title: "Industries",
+    subtitle:
+      "Physical AI understands situations, decides independently, and acts in changing real-world environments — handling tasks that require flexibility.",
+    robots: [
+      {
+        type: "MANUFACTURING",
+        title: "Manufacturing",
+        image: "/images/use-case-manufacturing.jpg",
+      },
+      {
+        type: "LOGISTICS",
+        title: "Logistics",
+        image: "/images/use-case-logistics.jpg",
+      },
+      {
+        type: "WAREHOUSE",
+        title: "Warehouse",
+        image: "/images/use-case-warehouse.jpg",
+      },
+      {
+        type: "CONSTRUCTION",
+        title: "Construction",
+        image: "/images/use-case-construction.jpg",
+      },
+      {
+        type: "INFRASTRUCTURE",
+        title: "Infrastructure",
+        image: "/images/use-case-infrastructure.jpg",
+      },
+      {
+        type: "PRIMARY",
+        title: "Primary industry",
+        image: "/images/use-case-primary.jpg",
+      },
+    ],
+  },
+  implementation: {
+    schedule: {
+      phases: [
+        {
+          step: "Step 0",
+          title: "Hardware selection",
+          items: [
+            "Deploy hardware on site",
+            "Verify basic motions",
+            "Begin data collection",
+            "Review safety and operating conditions",
+          ],
+        },
+        {
+          step: "Step 1",
+          title: "Development",
+          items: [
+            "Collect and analyze data",
+            "Identify issues and improvements",
+            "Evaluate operational aspects",
+          ],
+        },
+        {
+          step: "Step 2",
+          title: "Verification & improvement",
+          items: [
+            "Implement improvements",
+            "Re-run verification",
+            "Confirm results",
+          ],
+        },
+        {
+          step: "Step 3",
+          title: "Full rollout & operations",
+          items: [
+            "Full rollout and operations begin",
+            "Ongoing software development and improvement",
+            "Optimize on-site operations and adoption support",
+          ],
+        },
+      ],
+    },
+  },
+  faqs: [
+    {
+      question: "What can Physical AI do?",
+      answer:
+        "We combine humanoids, quadrupeds, robot arms, and AMRs with AI-driven perception, judgment, and control to automate tasks on site. Work includes transport and handling, patrol and inspection, and hazardous or demanding work — in manufacturing, logistics, construction, infrastructure, and primary industry. We also support non-standard tasks and long operating hours.",
+    },
+    {
+      question: "Can we purchase a robot?",
+      answer:
+        "Our business is software development, on-site integration, deployment support, and operations design using physical AI — not retail sales.",
+    },
+    {
+      question: "How much does it cost?",
+      answer:
+        "We propose an approach, schedule, and cost matched to your on-site challenge. A PoC agreement covers period, cost, deliverables, and success conditions. We do not publish a list price.",
+    },
+    {
+      question: "Which robots do you work with?",
+      answer:
+        "We work with humanoids such as Unitree G1, quadrupeds such as Unitree As2, and robot arms such as Enactic OpenArm. For quadrupeds, we select hardware based on each site's environment and tasks — not limited to As2. We propose the optimal combination of humanoids, quadrupeds, arms, and AMRs for your site and operating conditions.",
+    },
+    {
+      question: "How is this different from traditional robots?",
+      answer:
+        "Traditional robots are built for structured, fixed environments, repetitive motions, and standardized tasks. Physical AI understands situations, decides independently, and acts in changing real-world environments — handling tasks that require flexibility.",
+    },
+    {
+      question: "Can robots work alongside people on site?",
+      answer:
+        "Yes. We design deployment and operations to match on-site tasks and safety requirements. We install on site, tune for real operations, and verify safety. When hardware is deployed, we also review safety and operating conditions.",
+    },
+    {
+      question: "How long does it take to start?",
+      answer:
+        "PoC launch takes about one month: discovery and requirements, proposal and estimate, contract, hardware and development, on-site setup and tuning, then verification begins. After that, we move through site deployment, verification, improvement, PoC review, and full rollout. Full deployment includes ongoing software development and on-site operations support.",
+    },
+  ],
   contact: {
-    title: "Get in touch.",
-    body: "Questions about physical AI — deployment, operations, events, retail, warehouses, or logistics. We'd love to hear from you.",
+    title: "Contact",
+    body:
+      "Manufacturing, logistics, construction, infrastructure, and primary industry —\nwe take PoC and deployment inquiries for industrial sites.\n\nFrom hardware procurement and on-site setup through operations design, verification, and full rollout,\nwe propose a path matched to your tasks and how the site runs.",
     cta: "Contact Us",
     submit: "Send",
     form: {
@@ -64,8 +168,11 @@ const en = {
       company: "Company / Organization (required)",
       role: "Name / Role (optional)",
       message: "Message (optional)",
-      messagePlaceholder: "Timing, location, goals — anything helps.",
-      hint: "Your email app will open. Messages go to",
+      messagePlaceholder:
+        "Target site, tasks, timeline, or goals — anything helps.",
+      sending: "Sending…",
+      success: "Message sent.",
+      error: "Failed to send. Please try again.",
       subject: "Inquiry",
       bodyLabels: {
         email: "Email",
@@ -92,7 +199,7 @@ const en = {
       {
         label: "Business",
         value:
-          "Planning, production, and operation of physical AI services; robot implementation support for marketing, warehouse, and logistics",
+          "Software development, on-site integration, deployment support, and operations design using physical AI",
       },
       { label: "Contact", value: "contact@ashitanorobotics.co.jp" },
     ],
@@ -100,19 +207,23 @@ const en = {
   seo: {
     homeTitle: "Ashitano Robotics | Enriching Tomorrow Through Technology",
     companyDescription:
-      "Company profile of Ashitano Robotics — planning, production, and operation of physical AI services for marketing, warehouse, and logistics.",
+      "Company profile of Ashitano Robotics — software development, on-site integration, deployment support, and operations design using physical AI.",
     privacyDescription:
       "Privacy policy for Ashitano Robotics. Learn how we collect, use, and protect personal information submitted through this website.",
+    contactDescription:
+      "Contact Ashitano Robotics — software development, on-site integration, deployment support, and operations design using physical AI.",
     keywords: [
       "Ashitano Robotics",
       "physical AI",
       "robotics",
-      "robot promotion",
-      "event marketing",
-      "retail activation",
-      "warehouse automation",
-      "logistics robotics",
-      "robot implementation",
+      "humanoid robot",
+      "quadruped robot",
+      "robot arm",
+      "PoC",
+      "software development",
+      "on-site deployment",
+      "operations design",
+      "industrial automation",
       "Tokyo robotics",
     ],
   },
@@ -153,61 +264,166 @@ const ja = {
   name: "あしたのロボティクス",
   nameEn: "Ashitano Robotics",
   legalName: "あしたのロボティクス株式会社",
-  productLine: "テクノロジーで、あしたをもっと豊かに。",
   email: "contact@ashitanorobotics.co.jp",
   tagline: "テクノロジーで、あしたをもっと豊かに。",
   description:
-    "テクノロジーで、あしたをもっと豊かに。イベントや商業施設、倉庫・物流の現場でフィジカルAIを活用し、人とテクノロジーが出会う機会をつくります。",
+    "テクノロジーで、あしたをもっと豊かに。ヒューマノイド・四足歩行・アームなど、フィジカルAIの現場導入から運用設計まで支援します。",
   copyright: "© 2026 Ashitano Robotics. All Rights Reserved.",
   nav: {
-    solution: "サービス",
-    vision: "ビジョン",
+    services: "事業内容",
+    technology: "フィジカルAIの特徴",
+    faqs: "FAQ",
+    company: "会社概要",
     contact: "お問い合わせ",
   },
   hero: {
-    title: "テクノロジーで、\nあしたをもっと豊かに。",
-    cta: "お問い合わせ",
-    sub: "イベントや店舗から、倉庫・物流の現場まで。フィジカルAIを社会に届けます。",
+    title: "テクノロジーで、\nあしたをもっと豊かに",
     alt: "現場で活動するフィジカルAI",
   },
-  solution: {
-    statement:
-      "街も、施設も、働く現場も。フィジカルAIが活きる場所を、企画・導入・運用します。",
-    cardCta: "お問い合わせ",
-    capabilities: [
+  mission: {
+    body: "人手不足や高齢化をはじめ、社会を取り巻く課題は、これからさらに複雑になっていきます。私たちは、フィジカルAIを、人とともに働き、暮らしを支え、新しい価値を生み出す存在へと変えていきます。フィジカルAIを社会に実装することで、人がより創造的な仕事に向き合える、あしたの社会を構築します。",
+  },
+  news: {
+    items: [
       {
-        title: "マーケティング・プロモーション",
-        description:
-          "イベントや商業施設で、フィジカルAIの存在感を活かした集客・体験・コンバージョン施策を企画・実施します。",
-        image: "/images/cap-marketing-g1-v1.png",
-      },
-      {
-        title: "倉庫",
-        description:
-          "ピッキングや仕分け、在庫管理など、倉庫フロアでの作業をフィジカルAIがサポートします。",
-        image: "/images/cap-warehouse-g1-v1.png",
-      },
-      {
-        title: "物流",
-        description:
-          "積み込みからラストワンマイルまで、サプライチェーンを止めない物流現場を支援します。",
-        image: "/images/cap-logistics-g1-v1.png",
-      },
-      {
-        title: "営業終了後の監視",
-        description:
-          "店舗や施設の営業終了後も、フィジカルAIが巡回・監視し、夜間の安全を支えます。",
-        image: "/images/cap-monitoring-g1-v1.png",
+        date: "2026.08.21",
+        datetime: "2026-08-21",
+        title: "ホームページをリニューアルしました。",
       },
     ],
   },
-  vision: {
-    title: "現場から、変えていく。",
-    body: "フィジカルAIは、人が集まる場所から、人が働く現場まで、新しい価値を生み出す存在です。イベントや商業施設での集客・体験、倉庫や物流での作業支援、営業終了後の監視——活用の幅は広がり続けています。\n\n私たちは、こうした現場で企画・導入・運用まで一貫して伴走します。一つの現場で得た知見を次の現場へつなぎ、テクノロジーが自然に活きる場を、着実に増やしていく。\n\n遠い未来を語るだけではなく、目の前の現場から、フィジカルAIと人が共に働く当たり前をつくる。それが私たちのビジョンです。",
+  business: {
+    stickyWords: ["フィジカルAIを、", "現場で働く力へ"],
+    service:
+      "フィジカル AIを活用したソフトウェアの開発と現場へのインテグレーション、導入支援、運用設計",
+    serviceDetails: [
+      "機体調達、現場設置、運用設計、検証から本導入まで、対象業務と現場体制に合わせてご提案します。",
+      "本導入後は、開発・ソフトウェアの継続改善と、現場オペレーションの最適化・定着支援を行います。",
+      "ロボットの小売販売は行っておりません。",
+    ],
   },
+  useCases: {
+    title: "産業領域",
+    subtitle:
+      "フィジカル AIは、変化する現場環境で、状況を理解し、自ら判断して動きます。状況に応じて判断・行動し、柔軟性が必要な業務に対応します。",
+    robots: [
+      {
+        type: "MANUFACTURING",
+        title: "製造",
+        image: "/images/use-case-manufacturing.jpg",
+      },
+      {
+        type: "LOGISTICS",
+        title: "物流",
+        image: "/images/use-case-logistics.jpg",
+      },
+      {
+        type: "WAREHOUSE",
+        title: "倉庫",
+        image: "/images/use-case-warehouse.jpg",
+      },
+      {
+        type: "CONSTRUCTION",
+        title: "建設",
+        image: "/images/use-case-construction.jpg",
+      },
+      {
+        type: "INFRASTRUCTURE",
+        title: "インフラ",
+        image: "/images/use-case-infrastructure.jpg",
+      },
+      {
+        type: "PRIMARY",
+        title: "一次産業",
+        image: "/images/use-case-primary.jpg",
+      },
+    ],
+  },
+  implementation: {
+    schedule: {
+      phases: [
+        {
+          step: "Step0",
+          title: "機体選定",
+          items: [
+            "現場に機体を導入",
+            "基本動作の確認",
+            "データ取得開始",
+            "安全性・運用条件の検討",
+          ],
+        },
+        {
+          step: "Step1",
+          title: "開発",
+          items: [
+            "データ取得・分析",
+            "課題・改善点の特定",
+            "運用面の評価",
+          ],
+        },
+        {
+          step: "Step2",
+          title: "検証、改善",
+          items: ["改善実施", "再検証", "効果確認"],
+        },
+        {
+          step: "Step3",
+          title: "本導入・保守運用",
+          items: [
+            "本導入・運用開始",
+            "開発・ソフトウェアの継続改善",
+            "現場オペレーションの最適化・定着支援",
+          ],
+        },
+      ],
+    },
+  },
+  faqs: [
+    {
+      question: "フィジカルAIで、何ができますか？",
+      answer:
+        "ヒューマノイド・四足歩行・アーム・AMRなど、ロボットに、AIによる認識・判断・制御を組み合わせ、現場の業務を自動化します。運搬・搬送、巡回・点検、危険・過酷な作業など、製造、物流、建設、インフラ、一次産業の現場が対象です。非定型で長時間の現場特性にも対応します。",
+    },
+    {
+      question: "費用はどのくらいかかりますか？",
+      answer:
+        "現場の課題に合わせて、解決のアプローチ、スケジュール、費用をご提案します。PoC契約で期間・費用・成果条件等を合意します。定価の公開はしておりません。",
+    },
+    {
+      question: "導入の進め方を教えてください。",
+      answer:
+        "機体調達、現場設置、運用設計、検証から本導入まで、対象業務と現場体制に合わせてご提案します。ヒアリング・要件定義、ご提案・お見積り、ご契約、機体準備・開発、現場設置・調整、検証開始の順で進めます。",
+    },
+    {
+      question: "導入後のサポートはありますか？",
+      answer:
+        "本導入後は、開発・ソフトウェアの継続改善と、現場オペレーションの最適化・定着支援を行います。",
+    },
+    {
+      question: "どの業界に対応していますか？",
+      answer:
+        "製造、物流、建設、インフラ、一次産業の現場が対象です。運搬・搬送、巡回・点検、危険・過酷な作業など、非定型で長時間の現場特性にも対応します。",
+    },
+    {
+      question: "従来の産業用ロボットと何が違いますか？",
+      answer:
+        "従来のロボットは、整備された固定環境で、決められた動きを繰り返す定型・固定作業向けです。フィジカル AIは、変化する現場環境で、状況を理解し、自ら判断して動きます。状況に応じて判断・行動し、柔軟性が必要な業務に対応します。",
+    },
+    {
+      question: "人と一緒に現場で使えますか？",
+      answer:
+        "はい。現場の業務と安全条件に合わせて、導入・運用設計を行います。現場に設置し、実運用に向けた調整・安全確認を行います。現場投入時には、安全性・運用条件の検討も行います。",
+    },
+    {
+      question: "導入まで、どのくらいかかりますか？",
+      answer:
+        "概念検証（PoC）開始までは約1ヶ月間です。ヒアリング・要件定義、ご提案・お見積り、ご契約、機体準備・開発、現場設置・調整、検証開始の順で進めます。その後、機体選定、開発、検証、改善、本導入・保守運用へ進みます。本導入後は、開発・ソフトウェアの継続改善と、現場オペレーションの最適化・定着支援を行います。",
+    },
+  ],
   contact: {
-    title: "お気軽にご相談ください。",
-    body: "フィジカルAIの導入・運用、イベント、店舗、倉庫、物流など、お問い合わせをお待ちしています。",
+    title: "お問い合わせ",
+    body:
+      "製造、物流、建設、インフラ、一次産業など、\n産業現場におけるPoC・導入のご相談を受け付けています。\n\n機体調達、現場設置、運用設計、検証から本導入まで、\n対象業務と現場体制に合わせてご提案します。",
     cta: "お問い合わせ",
     submit: "送信する",
     form: {
@@ -215,8 +431,10 @@ const ja = {
       company: "会社・組織名（必須）",
       role: "ご担当（任意）",
       message: "メッセージ（任意）",
-      messagePlaceholder: "実施時期、場所、目的など、分かる範囲でご記入ください。",
-      hint: "メールアプリが開きます。送信先は",
+      messagePlaceholder: "",
+      sending: "送信中…",
+      success: "送信しました。",
+      error: "送信に失敗しました。もう一度お試しください。",
       subject: "お問い合わせ",
       bodyLabels: {
         email: "メール",
@@ -242,7 +460,7 @@ const ja = {
       {
         label: "事業内容",
         value:
-          "フィジカルAIを活用したマーケティング・倉庫・物流サービスの企画・制作・運営、ロボットの社会実装支援",
+          "フィジカル AIを活用したソフトウェアの開発と現場へのインテグレーション、導入支援、運用設計",
       },
       { label: "連絡先", value: "contact@ashitanorobotics.co.jp" },
     ],
@@ -250,9 +468,11 @@ const ja = {
   seo: {
     homeTitle: "あしたのロボティクス株式会社 | テクノロジーで、あしたをもっと豊かに。",
     companyDescription:
-      "あしたのロボティクス株式会社の会社概要。フィジカルAIを活用したマーケティング・倉庫・物流サービスの企画・制作・運営、ロボットの社会実装支援を行っています。",
+      "あしたのロボティクス株式会社の会社概要。フィジカル AIを活用したソフトウェアの開発と現場へのインテグレーション、導入支援、運用設計を行っています。",
     privacyDescription:
       "あしたのロボティクス株式会社のプライバシーポリシー。当ウェブサイトを通じて取得した個人情報の取り扱いについてご説明します。",
+    contactDescription:
+      "あしたのロボティクス株式会社へのお問い合わせ。フィジカル AIを活用したソフトウェアの開発と現場へのインテグレーション、導入支援、運用設計を行っています。",
     keywords: [
       "あしたのロボティクス株式会社",
       "あしたのロボティクス",
@@ -260,11 +480,12 @@ const ja = {
       "フィジカルAI",
       "ロボット",
       "ロボティクス",
-      "プロモーション",
-      "イベント集客",
-      "店舗プロモーション",
-      "倉庫自動化",
-      "物流ロボット",
+      "ヒューマノイド",
+      "四足歩行ロボット",
+      "PoC",
+      "ソフトウェア開発",
+      "現場導入",
+      "運用設計",
       "ロボット社会実装",
     ],
   },

@@ -1,129 +1,103 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import CtaButton from "@/components/CtaButton";
 import { getSite, type Locale } from "@/constants/site";
-import Reveal from "@/components/Reveal";
 
-const inputClassName =
-  "w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-white/30 focus:border-[var(--accent)] focus:shadow-[0_0_0_4px_rgba(3,136,183,0.15)]";
+type FormStatus = "idle" | "sending" | "success" | "error";
 
 export default function ContactCta({ locale }: { locale: Locale }) {
   const site = getSite(locale);
   const { form } = site.contact;
-  const [sentHint, setSentHint] = useState(false);
+  const [status, setStatus] = useState<FormStatus>("idle");
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (status === "sending" || status === "success") return;
+
     const data = new FormData(e.currentTarget);
-    const email = String(data.get("email") || "");
-    const company = String(data.get("company") || "");
-    const role = String(data.get("role") || "");
-    const message = String(data.get("message") || "");
+    const payload = {
+      email: String(data.get("email") || ""),
+      company: String(data.get("company") || ""),
+      role: String(data.get("role") || ""),
+      message: String(data.get("message") || ""),
+      locale,
+    };
 
-    const subject = encodeURIComponent(
-      `${form.subject} (${company || site.nameEn})`,
-    );
-    const body = encodeURIComponent(
-      [
-        `${form.bodyLabels.email}: ${email}`,
-        `${form.bodyLabels.company}: ${company}`,
-        `${form.bodyLabels.role}: ${role || "—"}`,
-        "",
-        message,
-      ].join("\n"),
-    );
+    setStatus("sending");
 
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
-    setSentHint(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        setStatus("error");
+        return;
+      }
+
+      setStatus("success");
+      e.currentTarget.reset();
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
-    <section
-      id="request-demo-section"
-      className="bg-black px-6 py-[var(--section-y)] text-white lg:py-[var(--section-y-lg)]"
-      aria-labelledby="contact-heading"
-    >
-      <Reveal>
-        <div className="mx-auto max-w-[640px] text-center">
-          <h2
-            id="contact-heading"
-            className="section-heading-lg mx-auto"
-          >
-            {site.contact.title}
-          </h2>
-          <p className="mt-6 text-[clamp(16px,1.8vw,22px)] leading-relaxed text-white/90">
-            {site.contact.body}
-          </p>
-        </div>
-      </Reveal>
-
-      <Reveal delayMs={140}>
-        <form
-          className="mx-auto mt-10 max-w-[640px] space-y-4 text-left"
-          onSubmit={onSubmit}
+    <form className="mt-12 space-y-4" onSubmit={onSubmit}>
+      <label className="block">
+        <span className="label-1 mb-2 block text-muted">{form.email}</span>
+        <input
+          required
+          name="email"
+          type="email"
+          autoComplete="email"
+          className="field-input"
+        />
+      </label>
+      <label className="block">
+        <span className="label-1 mb-2 block text-muted">{form.company}</span>
+        <input
+          required
+          name="company"
+          type="text"
+          autoComplete="organization"
+          className="field-input"
+        />
+      </label>
+      <label className="block">
+        <span className="label-1 mb-2 block text-muted">{form.role}</span>
+        <input name="role" type="text" className="field-input" />
+      </label>
+      <label className="block">
+        <span className="label-1 mb-2 block text-muted">{form.message}</span>
+        <textarea
+          name="message"
+          rows={4}
+          placeholder={form.messagePlaceholder}
+          className="field-input resize-y"
+        />
+      </label>
+      <div className="mt-2 flex flex-col items-center gap-3">
+        <CtaButton
+          type="submit"
+          disabled={status === "sending" || status === "success"}
         >
-          <label className="block">
-            <span className="mb-2 block text-sm text-white/70">
-              {form.email}
-            </span>
-            <input
-              required
-              name="email"
-              type="email"
-              autoComplete="email"
-              className={inputClassName}
-            />
-          </label>
-          <label className="block">
-            <span className="mb-2 block text-sm text-white/70">
-              {form.company}
-            </span>
-            <input
-              required
-              name="company"
-              type="text"
-              autoComplete="organization"
-              className={inputClassName}
-            />
-          </label>
-          <label className="block">
-            <span className="mb-2 block text-sm text-white/70">
-              {form.role}
-            </span>
-            <input name="role" type="text" className={inputClassName} />
-          </label>
-          <label className="block">
-            <span className="mb-2 block text-sm text-white/70">
-              {form.message}
-            </span>
-            <textarea
-              name="message"
-              rows={4}
-              placeholder={form.messagePlaceholder}
-              className={`${inputClassName} resize-y`}
-            />
-          </label>
-
-          <button
-            type="submit"
-            className="mt-4 flex w-full items-center justify-center rounded-[12px] border border-transparent bg-black px-6 py-3.5 text-base font-medium text-white shadow-[0_8px_40px_rgba(3,136,183,0.4)] transition hover:border-white md:hover:scale-[1.03]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#000,#000), linear-gradient(90deg,#0388b7,#00d4ff)",
-              backgroundOrigin: "border-box",
-              backgroundClip: "padding-box, border-box",
-              border: "1px solid transparent",
-            }}
-          >
-            {site.contact.submit}
-          </button>
-          {sentHint && (
-            <p className="text-center text-sm text-white/60">
-              {form.hint} {site.email}
-            </p>
-          )}
-        </form>
-      </Reveal>
-    </section>
+          {status === "sending" ? form.sending : site.contact.submit}
+        </CtaButton>
+        {status === "success" ? (
+          <p className="font-detail text-sm text-muted" role="status">
+            {form.success}
+          </p>
+        ) : null}
+        {status === "error" ? (
+          <p className="font-detail text-sm text-muted" role="alert">
+            {form.error}
+          </p>
+        ) : null}
+      </div>
+    </form>
   );
 }

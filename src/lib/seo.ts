@@ -5,15 +5,16 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
   "https://ashitanorobotics.co.jp";
 
-export const OG_IMAGE_PATH = "/images/hero-vision-desktop-v5.png";
+export const OG_IMAGE_PATH = "/images/hero-site.jpg";
 export const LOGO_PATH = "/images/logo-mark.png";
 
-export type PageKey = "home" | "company" | "privacy";
+export type PageKey = "home" | "company" | "privacy" | "contact";
 
 const PAGE_PATHS: Record<PageKey, Record<Locale, string>> = {
   home: { ja: "/", en: "/en" },
   company: { ja: "/company", en: "/en/company" },
   privacy: { ja: "/privacy", en: "/en/privacy" },
+  contact: { ja: "/contact", en: "/en/contact" },
 };
 
 export function getPagePath(locale: Locale, page: PageKey): string {
@@ -48,6 +49,8 @@ function pageTitle(locale: Locale, page: PageKey): string {
       return `${site.legalName} | ${site.company.title}`;
     case "privacy":
       return `${site.privacy.title} | ${site.legalName}`;
+    case "contact":
+      return `${site.contact.title} | ${site.legalName}`;
   }
 }
 
@@ -61,6 +64,8 @@ function pageDescription(locale: Locale, page: PageKey): string {
       return site.seo.companyDescription;
     case "privacy":
       return site.seo.privacyDescription;
+    case "contact":
+      return site.seo.contactDescription;
   }
 }
 

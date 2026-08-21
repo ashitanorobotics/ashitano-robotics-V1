@@ -69,12 +69,14 @@ function webPageSchema(locale: Locale, page: PageKey) {
     home: site.seo.homeTitle,
     company: site.company.title,
     privacy: site.privacy.title,
+    contact: site.contact.title,
   };
 
   const descriptions: Record<PageKey, string> = {
     home: site.description,
     company: site.seo.companyDescription,
     privacy: site.seo.privacyDescription,
+    contact: site.seo.contactDescription,
   };
 
   return {
@@ -95,7 +97,12 @@ function breadcrumbSchema(locale: Locale, page: PageKey) {
   const site = getSite(locale);
   const homePath = getPagePath(locale, "home");
   const pagePath = getPagePath(locale, page);
-  const pageLabel = page === "company" ? site.company.title : site.privacy.title;
+  const pageLabel =
+    page === "company"
+      ? site.company.title
+      : page === "privacy"
+        ? site.privacy.title
+        : site.contact.title;
 
   return {
     "@type": "BreadcrumbList",

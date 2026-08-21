@@ -29,6 +29,13 @@ const entries: Array<{
     priority: 0.5,
     changeFrequency: "yearly",
   },
+  {
+    page: "contact",
+    jaPath: "/contact",
+    enPath: "/en/contact",
+    priority: 0.8,
+    changeFrequency: "yearly",
+  },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
