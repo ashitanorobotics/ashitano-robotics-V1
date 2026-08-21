@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Noto_Sans_JP } from "next/font/google";
 import { createRootMetadata } from "@/lib/seo";
-import ScrollReset from "@/components/ScrollReset";
 import "./globals.css";
 
 const geist = Geist({
@@ -43,7 +42,6 @@ export default function RootLayout({
       className={`${geist.variable} ${geistMono.variable} ${montserrat.variable} ${notoSansJp.variable} antialiased`}
     >
       <body className="bg-bg font-sans text-fg antialiased">
-        <ScrollReset />
         {children}
       </body>
     </html>
