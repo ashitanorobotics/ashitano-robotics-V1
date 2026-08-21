@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { site } from "@/constants/site";
+import { INTRO_DONE_EVENT } from "@/constants/events";
 
 const STORAGE_KEY = "ashitano-intro-seen";
+
+function notifyIntroDone() {
+  window.dispatchEvent(new Event(INTRO_DONE_EVENT));
+}
 
 export default function IntroLoader() {
   const [visible, setVisible] = useState(true);
@@ -12,12 +17,14 @@ export default function IntroLoader() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setVisible(false);
+      notifyIntroDone();
       return;
     }
 
     try {
       if (sessionStorage.getItem(STORAGE_KEY) === "1") {
         setVisible(false);
+        notifyIntroDone();
         return;
       }
     } catch {
@@ -31,6 +38,7 @@ export default function IntroLoader() {
       } catch {
         // ignore
       }
+      notifyIntroDone();
     }, 1400);
 
     const remove = window.setTimeout(() => setVisible(false), 2300);
