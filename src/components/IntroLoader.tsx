@@ -15,7 +15,14 @@ export default function IntroLoader() {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // Intro overlay delays / blocks muted autoplay on mobile Safari.
+    const isCoarse =
+      window.matchMedia("(max-width: 1023px), (pointer: coarse)").matches;
+
+    if (
+      isCoarse ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
       setVisible(false);
       notifyIntroDone();
       return;

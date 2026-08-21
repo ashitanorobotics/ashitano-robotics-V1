@@ -470,6 +470,20 @@ body {
   -webkit-appearance: none;
 }
 
+.media-slot-video-pending {
+  opacity: 0;
+}
+
+.media-slot-cover {
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.media-slot-cover.is-hidden {
+  opacity: 0;
+}
+
 .media-slot-video::-webkit-media-controls {
   display: none !important;
   opacity: 0 !important;

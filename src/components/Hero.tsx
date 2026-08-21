@@ -194,6 +194,7 @@ export default function Hero({ locale }: { locale: Locale }) {
             <MediaSlot
               className="aspect-video w-full lg:aspect-[2/1]"
               videoSrc="/videos/hero.mp4"
+              coverSrc="/images/hero-site.jpg"
               alt={site.hero.alt}
               objectPosition="center center"
             />

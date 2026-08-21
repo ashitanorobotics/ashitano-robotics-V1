@@ -26,10 +26,19 @@ async function playVideo(video: HTMLVideoElement) {
   }
 }
 
+function pickSource(desktopSrc: string, mobileSrc?: string) {
+  if (!mobileSrc || typeof window === "undefined") return desktopSrc;
+  return window.matchMedia("(max-width: 1023px)").matches
+    ? mobileSrc
+    : desktopSrc;
+}
+
 export default function MediaSlot({
   className = "aspect-video",
   src,
   videoSrc,
+  mobileVideoSrc,
+  coverSrc,
   alt = "",
   objectFit = "cover",
   objectPosition = "center",
@@ -39,6 +48,9 @@ export default function MediaSlot({
   className?: string;
   src?: string;
   videoSrc?: string;
+  mobileVideoSrc?: string;
+  /** Opaque cover so iOS never shows its native play button. */
+  coverSrc?: string;
   alt?: string;
   objectFit?: "cover" | "contain";
   objectPosition?: string;
@@ -47,17 +59,28 @@ export default function MediaSlot({
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  const [activeSrc, setActiveSrc] = useState(videoSrc ?? "");
   const fitClass = objectFit === "contain" ? "object-contain" : "object-cover";
   const surfaceClass = surface === "accent" ? "bg-accent" : "bg-black";
   const mediaStyle = { objectPosition };
+  const showCover = Boolean(videoSrc && coverSrc && !playing);
+
+  useEffect(() => {
+    if (!videoSrc) return;
+    setActiveSrc(pickSource(videoSrc, mobileVideoSrc));
+  }, [videoSrc, mobileVideoSrc]);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video || !videoSrc) return;
+    if (!video || !activeSrc) return;
 
     unlockAutoplay(video);
+    setPlaying(false);
 
-    const syncPlaying = () => setPlaying(!video.paused && !video.ended);
+    const syncPlaying = () => {
+      const ok = !video.paused && !video.ended && video.readyState >= 2;
+      setPlaying(ok);
+    };
 
     const tryPlay = () => {
       void playVideo(video).then((ok) => {
@@ -76,7 +99,7 @@ export default function MediaSlot({
       "playing",
       "pause",
       "ended",
-      "suspend",
+      "timeupdate",
     ] as const;
     for (const event of mediaEvents) {
       video.addEventListener(event, syncPlaying);
@@ -86,6 +109,7 @@ export default function MediaSlot({
       "loadeddata",
       "canplay",
       "canplaythrough",
+      "playing",
     ] as const) {
       video.addEventListener(event, tryPlay);
     }
@@ -111,10 +135,13 @@ export default function MediaSlot({
 
     const io = new IntersectionObserver(
       (entries) => {
-        const visible = entries.some(
-          (entry) => entry.isIntersecting && entry.intersectionRatio > 0,
-        );
-        if (visible) tryPlay();
+        if (
+          entries.some(
+            (entry) => entry.isIntersecting && entry.intersectionRatio > 0,
+          )
+        ) {
+          tryPlay();
+        }
       },
       { threshold: [0, 0.1, 0.25, 0.5] },
     );
@@ -123,10 +150,10 @@ export default function MediaSlot({
     const started = Date.now();
     const timer = window.setInterval(() => {
       tryPlay();
-      if (!video.paused || Date.now() - started > 12000) {
+      if (!video.paused || Date.now() - started > 15000) {
         window.clearInterval(timer);
       }
-    }, 300);
+    }, 250);
 
     return () => {
       for (const event of mediaEvents) {
@@ -137,6 +164,7 @@ export default function MediaSlot({
         "loadeddata",
         "canplay",
         "canplaythrough",
+        "playing",
       ] as const) {
         video.removeEventListener(event, tryPlay);
       }
@@ -148,7 +176,7 @@ export default function MediaSlot({
       io.disconnect();
       window.clearInterval(timer);
     };
-  }, [videoSrc]);
+  }, [activeSrc]);
 
   return (
     <div
@@ -159,22 +187,35 @@ export default function MediaSlot({
       }}
     >
       {videoSrc ? (
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          controls={false}
-          disablePictureInPicture
-          disableRemotePlayback
-          aria-label={alt || undefined}
-          className={`media-slot-video absolute inset-0 h-full w-full ${fitClass}`}
-          style={mediaStyle}
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
+        <>
+          <video
+            ref={videoRef}
+            key={activeSrc}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            controls={false}
+            disablePictureInPicture
+            disableRemotePlayback
+            aria-label={alt || undefined}
+            className={`media-slot-video absolute inset-0 h-full w-full ${fitClass}${showCover ? " media-slot-video-pending" : ""}`}
+            style={mediaStyle}
+          >
+            <source src={activeSrc} type="video/mp4" />
+          </video>
+          {coverSrc ? (
+            <img
+              src={coverSrc}
+              alt=""
+              aria-hidden
+              className={`media-slot-cover absolute inset-0 h-full w-full ${fitClass}${playing ? " is-hidden" : ""}`}
+              style={mediaStyle}
+              draggable={false}
+            />
+          ) : null}
+        </>
       ) : src ? (
         <img
           src={src}
